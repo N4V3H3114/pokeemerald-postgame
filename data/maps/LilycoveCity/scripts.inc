@@ -16,6 +16,7 @@ LilycoveCity_OnTransition:
 
 LilycoveCity_OnLoad:
 	call_if_unset FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_SetWailmerMetatiles
+	call_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_UnsetOldFlags
 	end
 
 LilycoveCity_EventScript_SetWailmerMetatiles::
@@ -759,3 +760,83 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon:
 	.string "POKéMON as soon as we arrived.\p"
 	.string "I mean, we are totally happy!$"
 
+LilycoveCity_EventScript_UnsetOldFlags::
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_1
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_2
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_3
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_4
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_5
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_6
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_7
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_8
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_9
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_10
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_11
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_12
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_13
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_14
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_15
+	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_16
+	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_1
+	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_2
+	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_3
+	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_4
+	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_5
+	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_6
+	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_7
+	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_8
+	clearflag TRAINER_GRUNT_RUSTURF_TUNNEL
+	return
+
+
+LilycoveCity_EventScript_NeoAquaBattle::
+	trainerbattle_single TRAINER_GRUNT_RUSTURF_TUNNEL, LilycoveCity_Text_NeoTeamAquaGruntIntro, LilycoveCity_Text_NeoTeamAquaGrunt1Defeat, LilycoveCity_EventScript_PostAquaBattle
+	msgbox LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+LilycoveCity_EventScript_PostAquaBattle::
+	lockall
+	setflag FLAG_NEO_AQUA_LILYCOVE_MET
+	msgbox LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle
+	applymovement 23, NeoAqua_ExitLeft
+	removeobject 23
+	release
+	return
+
+
+NeoAqua_ExitEast:
+	face_down
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+NeoAqua_ExitLeft:
+	face_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	step_end
+
+LilycoveCity_Text_NeoTeamAquaGruntIntro::
+	.string "Ack, it's you!\p"
+	.string "What am I doing here? Ha, like I'd tell\n"
+	.string "you!$"
+
+LilycoveCity_Text_NeoTeamAquaGrunt1Defeat::
+	.string "You're as strong as they say.$"
+
+LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle::
+	.string "That's it, I'm outta here!$"

@@ -17,7 +17,7 @@ LilycoveCity_OnTransition:
 
 LilycoveCity_OnLoad:
 	call_if_unset FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_SetWailmerMetatiles
-	call_if_unset FLAG_NEO_AQUA_LILYCOVE_MET, LilycoveCity_EventScript_UnsetOldFlags
+	call_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_UnsetOldFlags
 	end
 
 LilycoveCity_EventScript_SetWailmerMetatiles::
@@ -776,49 +776,51 @@ text LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle {
 }
 
 script LilycoveCity_EventScript_UnsetOldFlags {
-	unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_1) 
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_2)       
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_3)       
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_4)       
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_5)       
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_6)       
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_7)       
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_8)       
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_9)       
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_10)      
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_11)      
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_12)      
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_13)      
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_14)      
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_15)      
-    unset_flag(TRAINER_GRUNT_MAGMA_HIDEOUT_16)
-	unset_flag(TRAINER_GRUNT_AQUA_HIDEOUT_1)
-	unset_flag(TRAINER_GRUNT_AQUA_HIDEOUT_2) 
-	unset_flag(TRAINER_GRUNT_AQUA_HIDEOUT_3) 
-	unset_flag(TRAINER_GRUNT_AQUA_HIDEOUT_4) 
-	unset_flag(TRAINER_GRUNT_AQUA_HIDEOUT_5) 
-	unset_flag(TRAINER_GRUNT_AQUA_HIDEOUT_6) 
-	unset_flag(TRAINER_GRUNT_AQUA_HIDEOUT_7) 
-	unset_flag(TRAINER_GRUNT_AQUA_HIDEOUT_8)
-	unset_flag(TRAINER_GRUNT_RUSTURF_TUNNEL)  
+	clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_1) 
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_2)       
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_3)       
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_4)       
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_5)       
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_6)       
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_7)       
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_8)       
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_9)       
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_10)      
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_11)      
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_12)      
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_13)      
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_14)      
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_15)      
+    clearflag(TRAINER_GRUNT_MAGMA_HIDEOUT_16)
+	clearflag(TRAINER_GRUNT_AQUA_HIDEOUT_1)
+	clearflag(TRAINER_GRUNT_AQUA_HIDEOUT_2) 
+	clearflag(TRAINER_GRUNT_AQUA_HIDEOUT_3) 
+	clearflag(TRAINER_GRUNT_AQUA_HIDEOUT_4) 
+	clearflag(TRAINER_GRUNT_AQUA_HIDEOUT_5) 
+	clearflag(TRAINER_GRUNT_AQUA_HIDEOUT_6) 
+	clearflag(TRAINER_GRUNT_AQUA_HIDEOUT_7) 
+	clearflag(TRAINER_GRUNT_AQUA_HIDEOUT_8)
+	clearflag(TRAINER_GRUNT_RUSTURF_TUNNEL)  
 }
 
 script LilycoveCity_EventScript_NeoAquaBattle {
-	trainerbattle_single(TRAINER_GRUNT_RUSTURF_TUNNEL, LilycoveCity_Text_NeoTeamAquaGruntIntro, LilycoveCity_Text_NeoTeamAquaGruntDefeat, LilycoveCity_EventScript_PostAquaBattle)
-	
+	trainerbattle_single(TRAINER_GRUNT_RUSTURF_TUNNEL, LilycoveCity_Text_NeoTeamAquaGruntIntro, LilycoveCity_Text_NeoTeamAquaGrunt1Defeat, LilycoveCity_EventScript_PostAquaBattle)
+	msgbox(LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle, MSGBOX_AUTOCLOSE)
+	end
 }
 
 script LilycoveCity_EventScript_PostAquaBattle {
 	lockall
 	setflag(FLAG_NEO_AQUA_LILYCOVE_MET)
 	msgbox(LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle)
-	switch (var(GetPlayerFacingDirection)) {
-		case DIR_EAST:
-			applymovement(fill with the grunt id, NeoAqua_ExitEast)
-		default:
-			applymovement(fill with the grunt id, NeoAqua_ExitLeft)
-	}
-	removeobject(grunt id)
+	//switch (var(GetPlayerFacingDirection)) {
+	//	case DIR_EAST:
+	//		applymovement(21, NeoAqua_ExitEast)
+	//	default:
+	//		applymovement(21, NeoAqua_ExitLeft)
+	//}
+	applymovement(23, NeoAqua_ExitLeft)
+	removeobject(23)
 	release
 }
 
