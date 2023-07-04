@@ -190,3 +190,16 @@ Route121_Text_SafariZoneSign:
 	.string "“Filled with rare POKéMON!”\n"
 	.string "SAFARI ZONE$"
 
+Route121_SpeakWithRival::
+	msgbox Route121_Text_SpeakWithRival
+	end
+
+
+Route121_Text_SpeakWithRival::
+	.string "Oh hi {PLAYER}, what are you doing\n"
+	.string "here?\p"
+	.string "...\p"
+	.string "An Aqua grunt? Yeah I saw him go toward\n"
+	.string "Mt. Pyre.\p"
+	.string "It's odd though, he started surfing\n"
+	.string "toward the EAST.$"

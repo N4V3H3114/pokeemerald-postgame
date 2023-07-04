@@ -46,7 +46,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_NeoAquaGruntHideout2),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_NeoAquaGruntHideout2),
     },
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_3] =
@@ -8614,7 +8614,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_NeoMagmaGruntHideout2),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_NeoMagmaGruntHideout2),
     },
 
     [TRAINER_GRUNT_MAGMA_HIDEOUT_3] =

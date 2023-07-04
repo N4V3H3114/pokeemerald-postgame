@@ -12512,7 +12512,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_NeoAquaGruntHideout2[] = 
     .species = SPECIES_PELIPPER,
     .moves = {MOVE_SURF, MOVE_WING_ATTACK, MOVE_BLIZZARD, MOVE_AIR_CUTTER}
     },
-}
+};
 
 static const struct TrainerMonNoItemCustomMoves sParty_NeoMagmaGruntHideout2[] = { //teams up with aqua grunt 2 
     {
@@ -12541,7 +12541,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout3[] 
         .species = SPECIES_DODRIO,
     },
     {
-        .iv = 40
+        .iv = 40,
         .lvl = 70,
         .species = SPECIES_GRAVELER,
     },

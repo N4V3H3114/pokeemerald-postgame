@@ -811,17 +811,18 @@ script LilycoveCity_EventScript_NeoAquaBattle {
 
 script LilycoveCity_EventScript_PostAquaBattle {
 	lockall
-	setflag(FLAG_NEO_AQUA_LILYCOVE_MET)
 	msgbox(LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle, MSGBOX_DEFAULT)
-	setvar(VAR_RESULT, GetPlayerFacingDirection)
-	switch (var(VAR_RESULT)) {
-		case DIR_EAST:
-			applymovement(21, NeoAqua_ExitEast)
-		default:
-			applymovement(21, NeoAqua_ExitLeft)
-	}
+	//specialvar(VAR_RESULT, GetPlayerFacingDirection)
+	//switch (var(VAR_RESULT)) {
+	//	case DIR_EAST:
+	//		applymovement(23, NeoAqua_ExitEast)
+	//	default:
+	//		applymovement(23, NeoAqua_ExitLeft)
+	//}
 	applymovement(23, NeoAqua_ExitLeft)
+	waitmovement(23)
 	removeobject(23)
+	setflag(FLAG_NEO_AQUA_LILYCOVE_MET)
 	release
 }
 

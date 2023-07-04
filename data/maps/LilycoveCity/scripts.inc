@@ -761,31 +761,31 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon:
 	.string "I mean, we are totally happy!$"
 
 LilycoveCity_EventScript_UnsetOldFlags::
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_1
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_2
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_3
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_4
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_5
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_6
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_7
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_8
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_9
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_10
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_11
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_12
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_13
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_14
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_15
-	clearflag TRAINER_GRUNT_MAGMA_HIDEOUT_16
-	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_1
-	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_2
-	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_3
-	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_4
-	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_5
-	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_6
-	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_7
-	clearflag TRAINER_GRUNT_AQUA_HIDEOUT_8
-	clearflag TRAINER_GRUNT_RUSTURF_TUNNEL
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_1
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_2
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_3
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_4
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_5
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_6
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_7
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_8
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_9
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_10
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_11
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_12
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_13
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_14
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_15
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_16
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_1
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_2
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_3
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_4
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_5
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_6
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_7
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_8
+	cleartrainerflag TRAINER_GRUNT_RUSTURF_TUNNEL
 	return
 
 
@@ -797,10 +797,11 @@ LilycoveCity_EventScript_NeoAquaBattle::
 
 LilycoveCity_EventScript_PostAquaBattle::
 	lockall
-	setflag FLAG_NEO_AQUA_LILYCOVE_MET
-	msgbox LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle
+	msgbox LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle, MSGBOX_DEFAULT
 	applymovement 23, NeoAqua_ExitLeft
+	waitmovement 23
 	removeobject 23
+	setflag FLAG_NEO_AQUA_LILYCOVE_MET
 	release
 	return
 
