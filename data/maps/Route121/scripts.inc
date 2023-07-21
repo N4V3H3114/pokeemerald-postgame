@@ -3,7 +3,23 @@
 .set LOCALID_GRUNT_3, 14
 
 Route121_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route121_OnTransition
 	.byte 0
+
+Route121_OnTransition::
+	call_if_unset FLAG_NEO_AQUA_LILYCOVE_MET Route121_UnsetRivalVisible
+	call_if_set FLAG_NEO_AQUA_LILYCOVE_MET Route121_SetRivalVisible
+	call_if_set FLAG_FABLED_ISLAND_START Route121_UnsetRivalVisible
+	end
+
+Route121_SetRivalVisible::
+	clearflag FLAG_ROUTE121_SHOW_RIVAL 
+	end
+
+Route121_UnsetRivalVisible::
+	setflag FLAG_ROUTE121_SHOW_RIVAL
+	end 
+
 
 Route121_EventScript_Woman::
 	msgbox Route121_Text_AheadLoomsMtPyre, MSGBOX_NPC
@@ -191,7 +207,7 @@ Route121_Text_SafariZoneSign:
 	.string "SAFARI ZONE$"
 
 Route121_SpeakWithRival::
-	msgbox Route121_Text_SpeakWithRival
+	msgbox Route121_Text_SpeakWithRival, MSGBOX_NPC
 	end
 
 
