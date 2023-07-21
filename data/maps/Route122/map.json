@@ -34,6 +34,13 @@
       "elevation": 0,
       "dest_map": "MAP_MT_PYRE_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 50,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE122",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

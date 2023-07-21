@@ -374,7 +374,7 @@
     {
       "id": "LAYOUT_ROUTE122",
       "name": "Route122_Layout",
-      "width": 40,
+      "width": 65,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
