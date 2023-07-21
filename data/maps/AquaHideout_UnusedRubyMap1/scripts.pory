@@ -1,0 +1,10 @@
+raw `
+AquaHideout_UnusedRubyMap1_MapScripts::
+	.byte 0
+    `
+
+script LilycoveCity_EventScript_NeoAquaBattle {
+	trainerbattle_single(TRAINER_GRUNT_RUSTURF_TUNNEL, LilycoveCity_Text_NeoTeamAquaGruntIntro, LilycoveCity_Text_NeoTeamAquaGrunt1Defeat, LilycoveCity_EventScript_PostAquaBattle)
+	msgbox(LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle, MSGBOX_AUTOCLOSE)
+	end
+}
