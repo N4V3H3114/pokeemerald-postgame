@@ -12438,22 +12438,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntLilycove[] = {
     {
     .iv = 10,
-    .lvl = 65,
+    .lvl = 75,
     .species = SPECIES_ZANGOOSE,
     },
     {
     .iv = 10,
-    .lvl = 64,
+    .lvl = 74,
     .species = SPECIES_SEVIPER,
     },
     {
     .iv = 10,
-    .lvl = 65,
+    .lvl = 75,
     .species = SPECIES_WHISCASH,
     },
     {
     .iv = 10,
-    .lvl = 67,
+    .lvl = 77,
     .species = SPECIES_BEEDRILL,
     },
 };
@@ -12461,17 +12461,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntLilycove[] =
 static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout1[] = { //should guard the front area of the base
     {
     .iv = 30,
-    .lvl = 69,
+    .lvl = 79,
     .species = SPECIES_LILEEP,
     },
     {
     .iv = 30,
-    .lvl = 69,
+    .lvl = 79,
     .species = SPECIES_PHANPY,
     },
     {
     .iv = 30,
-    .lvl = 70,
+    .lvl = 80,
     .species = SPECIES_GLIGAR,
     },
 };
@@ -12479,22 +12479,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout1[] 
 static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout1[] = { //teams up with magma grunt 
     {
         .iv = 40,
-        .lvl = 69,
+        .lvl = 79,
         .species = SPECIES_HITMONCHAN,
     },
     {
         .iv = 40,
-        .lvl = 70,
+        .lvl = 80,
         .species = SPECIES_PIKACHU,
     },
     {
         .iv = 40,
-        .lvl = 70,
+        .lvl = 80,
         .species = SPECIES_WARTORTLE,
     },
     {
         .iv = 40,
-        .lvl = 69,
+        .lvl = 79,
         .species = SPECIES_KABUTO,
     },
 };
@@ -12502,13 +12502,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout1[] =
 static const struct TrainerMonNoItemCustomMoves sParty_NeoAquaGruntHideout2[] = { //teams up with magma grunt 2
     {
     .iv = 50,
-    .lvl = 70,
+    .lvl = 80,
     .species = SPECIES_QUAGSIRE,
     .moves = {MOVE_ICY_WIND, MOVE_SURF, MOVE_LIGHT_SCREEN, MOVE_NONE}
     },
     {
     .iv = 50,
-    .lvl = 70,
+    .lvl = 80,
     .species = SPECIES_PELIPPER,
     .moves = {MOVE_SURF, MOVE_WING_ATTACK, MOVE_BLIZZARD, MOVE_AIR_CUTTER}
     },
@@ -12517,13 +12517,13 @@ static const struct TrainerMonNoItemCustomMoves sParty_NeoAquaGruntHideout2[] = 
 static const struct TrainerMonNoItemCustomMoves sParty_NeoMagmaGruntHideout2[] = { //teams up with aqua grunt 2 
     {
     .iv = 50,
-    .lvl = 70,
+    .lvl = 80,
     .species = SPECIES_QUAGSIRE,
     .moves = {MOVE_ICY_WIND, MOVE_SURF, MOVE_LIGHT_SCREEN, MOVE_NONE}
     },
     {
     .iv = 50,
-    .lvl = 70,
+    .lvl = 80,
     .species = SPECIES_CLAYDOL,
     .moves = {MOVE_FLAMETHROWER, MOVE_EARTHQUAKE, MOVE_COSMIC_POWER, MOVE_NONE}
     },
@@ -12532,17 +12532,17 @@ static const struct TrainerMonNoItemCustomMoves sParty_NeoMagmaGruntHideout2[] =
 static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout3[] = {
     {
         .iv = 40,
-        .lvl = 69,
+        .lvl = 79,
         .species = SPECIES_ROSELIA,
     },
     {
         .iv = 40,
-        .lvl = 71,
+        .lvl = 81,
         .species = SPECIES_DODRIO,
     },
     {
         .iv = 40,
-        .lvl = 70,
+        .lvl = 80,
         .species = SPECIES_GRAVELER,
     },
 };

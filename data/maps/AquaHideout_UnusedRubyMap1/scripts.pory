@@ -3,8 +3,81 @@ AquaHideout_UnusedRubyMap1_MapScripts::
 	.byte 0
     `
 
-script LilycoveCity_EventScript_NeoAquaBattle {
-	trainerbattle_single(TRAINER_GRUNT_RUSTURF_TUNNEL, LilycoveCity_Text_NeoTeamAquaGruntIntro, LilycoveCity_Text_NeoTeamAquaGrunt1Defeat, LilycoveCity_EventScript_PostAquaBattle)
-	msgbox(LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle, MSGBOX_AUTOCLOSE)
+script NeoHideout_Map1_EventScript_NeoMagmaBattle1 {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_1, NeoHideout_Map1_Magma_Grunt_1_Intro, NeoHideout_Map1_Magma_Grunt_1_Defeat)
+	msgbox(NeoHideout_Map1_Magma_Grunt_1_Defeat, MSGBOX_NPC)
 	end
 }
+
+text NeoHideout_Map1_Magma_Grunt_1_Intro {
+	format ("Haha surprised to see Aqua and Magma working together?\pWe've banded together to take you down!")
+}
+
+text NeoHideout_Map1_Magma_Grunt_1_Defeat {
+	format ("No worries, even if I am defeated, we have strong teamwork")
+}
+
+script NeoHideout_Map1_EventScript_NeoAquaBattle1 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_1, NeoHideout_Map1_Aqua_Grunt_1_Intro, NeoHideout_Map1_Aqua_Grunt_1_Defeat)
+	msgbox(NeoHideout_Map1_Aqua_Grunt_1_Defeat, MSGBOX_NPC)
+}
+
+text NeoHideout_Map1_Aqua_Grunt_1_Intro {
+	format ("You might expect me to say something like, 'where magma fails aqua will succeed' right?\pWell our new team is above petty squabbles, I'll avenge him!")
+}
+
+text NeoHideout_Map1_Aqua_Grunt_1_Defeat {
+	format("If I boasted like that anyway, it would be more embarassing when I lose")
+}
+
+text NeoHideout_Map1_Grunt_Double_Intro {
+	format ("When Aqua and Magma combine, we're unstoppable!")
+}
+
+text NeoHideout_Map1_Grunt_Double_Defeat {
+	format ("There's nothing worse than defeat")
+}
+
+text NeoHideout_Map1_Aqua_Grunt_2_PostBattle {
+	format ("I don't beleive it, how could we lose?")
+}
+
+text NeoHideout_Map1_Magma_Grunt_2_PostBattle {
+	format ("Hehe are you surprised to see Aqua and Magma dating? It's like Romeo and Juliet right?")
+}
+
+
+script NeoHideout_Map1_EventScript_Aqua_NeoDoubleBattle1 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_2, NeoHideout_Map1_Grunt_Double_Intro, NeoHideout_Map1_Grunt_Double_Defeat)
+	msgbox(NeoHideout_Map1_Aqua_Grunt_2_PostBattle, MSGBOX_NPC)
+}
+
+script NeoHideout_Map1_EventScript_Magma_NeoDoubleBattle1 {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_2, NeoHideout_Map1_Grunt_Double_Intro, NeoHideout_Map1_Grunt_Double_Defeat)
+	msgbox(NeoHideout_Map1_Magma_Grunt_2_PostBattle, MSGBOX_NPC)
+}
+
+text NeoHideout_Map1_Aqua_Guard_Location_Text {
+	format ("You may be tough, but we won't just let you through. Our bosses are away at Fabled Island.\pYou haven't heard of it? It's south of Route 118.\pWhoops! I shouldn't have said that!")
+}
+
+text NeoHideout_Map1_Aqua_Guard_Motive_Text {
+	format ("Hey do you remember us? We aren't gonna let you through. Our bosses are looking for some meteor that will make their dreams come true.\pWhoops! I talk too much!")
+}
+
+script NeoHideout_Map1_Aqua_Guard_Location {
+	msgbox(NeoHideout_Map1_Aqua_Guard_Location_Text, MSGBOX_NPC)
+}
+
+script NeoHideout_Map1_Aqua_Guard_Motive {
+	msgbox(NeoHideout_Map1_Aqua_Guard_Motive_Text, MSGBOX_NPC)
+}
+
+
+
+
+
+
+
+
+
