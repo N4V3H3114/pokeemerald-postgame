@@ -9,7 +9,7 @@ It builds the following ROM:
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
 
-## See also
+
 
 Other disassembly and/or decompilation projects:
 * [**Pokémon Red and Blue**](https://github.com/pret/pokered)
