@@ -210,3 +210,6 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_newTileset[] = INCBIN_U16("data/tilesets/secondary/new_tileset/metatiles.bin");
 const u16 gMetatileAttributes_newTileset[] = INCBIN_U16("data/tilesets/secondary/new_tileset/metatile_attributes.bin");
+
+const u16 gMetatiles_FabledTileset[] = INCBIN_U16("data/tilesets/secondary/fabled_tileset/metatiles.bin");
+const u16 gMetatileAttributes_FabledTileset[] = INCBIN_U16("data/tilesets/secondary/fabled_tileset/metatile_attributes.bin");

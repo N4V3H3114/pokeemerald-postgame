@@ -1,0 +1,21 @@
+raw `
+Route135_MapScripts::
+	.byte 0
+`
+
+text FabledIslandBeachBoy_Text {
+	format ("Waaaaahh! These Pokemon are really scary!\pHm? Wait you're {PLAYER} the Champion right? Are you here about those weird guys that showed up?\p...\pWow that's awesome I get to meet the Champion before he goes into battle. I'm rooting for you!")
+}
+
+text FabledIslandGarden_Text {
+    format ("This is Fabled Island. It is a home to many different Pokemon.\pThe ones here are friendly, but the ones further in you must be careful of.")
+}
+
+
+script FabledIslandBeachBoy {
+	msgbox(FabledIslandBeachBoy_Text, MSGBOX_NPC)
+}
+
+script FabledIslandGardenWoman {
+    msgbox(FabledIslandGarden_Text, MSGBOX_NPC)
+}
