@@ -11,6 +11,26 @@ text FabledIslandGarden_Text {
     format ("This is Fabled Island. It is a home to many different Pokemon.\pThe ones here are friendly, but the ones further in you must be careful of.")
 }
 
+text FabledIslandSign_Text {
+	format("Little Garden\nWatch where you tred")
+}
+
+text TreasuresOfTheIsland_Text {
+	format("I'm afraid something has fallen to the island and needs rescuing. Are you here to save it?")
+}
+
+text TreasuresOfTheIslandYes_Text {
+	format("Good, you should know then that there's lots of hidden treasurs on this island. They are yours if you come across them.")
+}
+
+text TreasuresOfTheIslandNo_text {
+	format("Then you should leave.")
+}
+
+text FabledIslandTrees_Text {
+	format("This tree gives a tropical feel. It is very different from other trees in Hoenn.")
+}
+
 
 script FabledIslandBeachBoy {
 	msgbox(FabledIslandBeachBoy_Text, MSGBOX_NPC)
@@ -18,4 +38,22 @@ script FabledIslandBeachBoy {
 
 script FabledIslandGardenWoman {
     msgbox(FabledIslandGarden_Text, MSGBOX_NPC)
+}
+
+script FabledIslandGardenSign {
+	msgbox(FabledIslandSign_Text, MSGBOX_SIGN)
+}
+
+script FabledIslandTrees {
+	msgbox(FabledIslandTrees_Text, MSGBOX_SIGN)
+}
+
+script FabledIslandWillYouSaveIt {
+	msgbox(TreasuresOfTheIsland_Text, MSGBOX_YESNO)
+	if (var(VAR_RESULT) == 1) {
+            msgbox(FabledIslandYes_Text, MSGBOX_DEFAULT)
+        }
+		else {
+			msgbox(FabledIslandNo_Text, MSGBOX_DEFAULT)
+		}
 }

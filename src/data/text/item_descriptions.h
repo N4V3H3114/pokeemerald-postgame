@@ -703,14 +703,14 @@ static const u8 sLansatBerryDesc[] = _(
     "hit rate in a pinch.");
 
 static const u8 sStarfBerryDesc[] = _(
-    "A hold item that\n"
-    "sharply boosts a\n"
-    "stat in a pinch.");
+    "Fabled Island berry\n"
+    "that sharply boosts\n"
+    "a stat in a pinch.");
 
 static const u8 sEnigmaBerryDesc[] = _(
     "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow a mystery.");
+    "A mystery from\n"
+    "Fabled Island.");
 
 // Hold items
 static const u8 sBrightPowderDesc[] = _(
