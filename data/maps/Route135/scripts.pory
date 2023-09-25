@@ -31,6 +31,9 @@ text FabledIslandTrees_Text {
 	format("This tree gives a tropical feel. It is very different from other trees in Hoenn.")
 }
 
+text FabledIslandStatue_Text {
+	format("This statue resembles a Pokemon. It looks very old.")
+}
 
 script FabledIslandBeachBoy {
 	msgbox(FabledIslandBeachBoy_Text, MSGBOX_NPC)
@@ -56,4 +59,8 @@ script FabledIslandWillYouSaveIt {
 		else {
 			msgbox(FabledIslandNo_Text, MSGBOX_DEFAULT)
 		}
+}
+
+script FabledIslandStatue {
+	msgbox(FabledIslandStatue_Text, MSGBOX_SIGN)
 }

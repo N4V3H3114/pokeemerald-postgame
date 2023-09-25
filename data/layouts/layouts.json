@@ -4414,8 +4414,8 @@
     {
       "id": "LAYOUT_ROUTE135",
       "name": "Route135_Layout",
-      "width": 45,
-      "height": 45,
+      "width": 48,
+      "height": 48,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_FabledTileset",
       "border_filepath": "data/layouts/Route135/border.bin",

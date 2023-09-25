@@ -409,6 +409,14 @@
       "height": 1
     },
     {
+      "map_section": "MAPSEC_ROUTE_FABLED_ISLAND",
+      "name": "FABLED ISLAND",
+      "x": 11,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
       "map_section": "MAPSEC_UNDERWATER_124",
       "name": "UNDERWATER",
       "x": 20,
