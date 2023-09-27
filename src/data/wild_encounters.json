@@ -11499,64 +11499,94 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 20,
-                "species": "SPECIES_NIDORINO"
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_KABUTO"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_MINUN"
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_OMANYTE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_HOUNDOOM"
+                "min_level": 57,
+                "max_level": 60,
+                "species": "SPECIES_TOGEPI"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_SENTRET"
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_TOGEPI"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NINCADA"
+                "min_level": 65,
+                "max_level": 68,
+                "species": "SPECIES_AERODACTYL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NIDORINO"
+                "min_level": 65,
+                "max_level": 68,
+                "species": "SPECIES_AERODACTYL"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_REGISTEEL"
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_GRAVELER"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_QUILAVA"
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_SLAKOTH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_GENGAR"
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_SLAKOTH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_COMBUSKEN"
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_SLAKOTH"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 60,
+                "max_level": 60,
                 "species": "SPECIES_CASTFORM"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_ZIGZAGOON"
+                "min_level": 60,
+                "max_level": 60,
+                "species": "SPECIES_CASTFORM"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 60,
+                "species": "SPECIES_MANTINE"
+              },
+              {
+                "min_level": 55,
+                "max_level": 60,
+                "species": "SPECIES_SEADRA"
+              },
+              {
+                "min_level": 55,
+                "max_level": 60,
+                "species": "SPECIES_MANTINE"
+              },
+              {
+                "min_level": 80,
+                "max_level": 85,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 80,
+                "max_level": 85,
+                "species": "SPECIES_GYARADOS"
               }
             ]
           }

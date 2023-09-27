@@ -8593,7 +8593,7 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Deandre),
     },
 
-    [TRAINER_GRUNT_MAGMA_HIDEOUT_1] =
+    [TRAINER_GRUNT_MAGMA_HIDEOUT_1] = //Used in hideout
     {
         .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
@@ -8605,7 +8605,7 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_NeoMagmaGruntHideout1),
     },
 
-    [TRAINER_GRUNT_MAGMA_HIDEOUT_2] =
+    [TRAINER_GRUNT_MAGMA_HIDEOUT_2] = //Used in hideout
     {
         .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
@@ -8617,11 +8617,11 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_CUSTOM_MOVES(sParty_NeoMagmaGruntHideout2),
     },
 
-    [TRAINER_GRUNT_MAGMA_HIDEOUT_3] =
+    [TRAINER_GRUNT_MAGMA_HIDEOUT_3] = //Used in Fabled Island
     {
         .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_M,
+        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_F,
         .trainerName = _("NEO GRUNT"),
         .items = {},
         .doubleBattle = FALSE,

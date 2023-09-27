@@ -12545,5 +12545,10 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout3[] 
         .lvl = 80,
         .species = SPECIES_GRAVELER,
     },
+    {
+        .iv = 100,
+        .lvl = 81,
+        .species = SPECIES_WIGGLYTUFF,
+    }
 };
 

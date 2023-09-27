@@ -19,11 +19,11 @@ text TreasuresOfTheIsland_Text {
 	format("I'm afraid something has fallen to the island and needs rescuing. Are you here to save it?")
 }
 
-text TreasuresOfTheIslandYes_Text {
+text TreasuresOfTheIsland_Yes_Text {
 	format("Good, you should know then that there's lots of hidden treasurs on this island. They are yours if you come across them.")
 }
 
-text TreasuresOfTheIslandNo_text {
+text TreasuresOfTheIsland_No_Text {
 	format("Then you should leave.")
 }
 
@@ -54,13 +54,27 @@ script FabledIslandTrees {
 script FabledIslandWillYouSaveIt {
 	msgbox(TreasuresOfTheIsland_Text, MSGBOX_YESNO)
 	if (var(VAR_RESULT) == 1) {
-            msgbox(FabledIslandYes_Text, MSGBOX_DEFAULT)
+            msgbox(TreasuresOfTheIsland_Yes_Text, MSGBOX_NPC)
         }
 		else {
-			msgbox(FabledIslandNo_Text, MSGBOX_DEFAULT)
+			msgbox(TreasuresOfTheIsland_No_Text, MSGBOX_NPC)
 		}
 }
 
 script FabledIslandStatue {
 	msgbox(FabledIslandStatue_Text, MSGBOX_SIGN)
+}
+
+script FabledIsland_Route135_EventScript_NeoMagmaBattle1 {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_3, FabledIsland_Route135_Magma_Grunt_1_Intro, FabledIsland_Route135_Magma_Grunt_1_Defeat)
+	msgbox(NeoHideout_Map1_Magma_Grunt_1_Defeat, MSGBOX_NPC)
+	end
+}
+
+text FabledIsland_Route135_Magma_Grunt_1_Intro {
+	format("Hee hee, I got left behind wandering around too much, but because of that, I can battle you!")
+}
+
+text FabledIsland_Route135_Magma_Grunt_1_Defeat {
+	format("Darn, I should have just wandered away from you instead.")
 }
