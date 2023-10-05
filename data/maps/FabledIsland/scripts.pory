@@ -1,0 +1,159 @@
+raw `
+FabledIsland_MapScripts::
+	.byte 0
+`
+
+text FabledIsland_Neo_AquaGrunt1_Intro_Text { //Stands at the beginning of the map
+    format("I'm up first, and I'll guarantee this operation is a success!")
+}
+
+text FabledIsland_Neo_AquaGrunt1_Defeat_Text {
+    format("Bah, but it doesn't matter, we have more members waiting to take you on.")
+}
+
+text FabledIsland_Neo_AquaGrunt1_Post_Defeat_Text {
+    format("We brought lots of supplies with us to guarantee our success. If you run away, we'll be ready for your return.")
+}
+
+text FabledIsland_Neo_MagmaGrunt1_Intro_Text { //First guy on left side
+    format("I hear this path has something really cool at the end. You're not gonna take it from me!")
+}
+
+text FabledIsland_Neo_MagmaGrunt1_Defeat_Text {
+    format("Ahaha I mean, we could share the treasure instead")
+}
+
+text FabledIsland_Neo_AquaGrunt2_Intro_Text { //last guy on left side
+    format("Those rocks were too confusing for me and now I'm frustrated!\pNow I'll take it out on you, WRAAAHHHH!")
+}
+
+text FabledIsland_Neo_AquaGrunt2_Defeat_Text {
+    format("Ahh that really helped calm me down. Thanks!")
+}
+
+text FabledIsland_Left_Path_Woman_Text {
+    format("You've done well to make it here. As a reward you can try to get a pokemon from this pond. Maybe it can help you on your journey.")
+}
+
+text FabledIsland_Neo_MagmaGrunt2_Intro_Text { //First guy on middle path
+    format("Gah I don't have the right Pokemon for this!")
+}
+
+text FabledIsland_Neo_MagmaGrunt2_Defeat_Text {
+    format("Cut, Strength, Rock Smash, Surf, Waterfall... it's too much!")
+}
+//Need 4 grunts leading up the mountain
+
+text FabledIsland_Neo_AquaGrunt3_Intro_Text {
+    format("Do you see the holes around this area? It's from fallen meteorites. Cool Right?")
+}
+
+text FabledIsland_Neo_AquaGrunt3_Defeat_Text {
+    format("Oh well, now that I'm beaten I can go look at the cool craters.")
+}
+
+text FabledIsland_Neo_MagmaGrunt3_Intro_Text {
+    format("Ascending the giant mountain on Fabled Island... seems kind of exciting!")
+}
+
+text FabledIsland_Neo_MagmaGrunt3_Defeat_Text {
+    format("I'm glad I don't have to climb all the way up there")
+}
+
+text FabledIsland_Neo_AquaGrunt4_Intro_Text {
+    format("UWWWOOOAAAHHHH, I'll cool you down")
+}
+
+text FabledIsland_Neo_AquaGrunt4_Defeat_Text {
+    format("uwaahhh... I cooled too much")
+}
+
+text FabledIsland_Neo_MagmaGrunt4_Intro_Text {
+    format("FWOOOOSSHHH, I'll melt you!")
+}
+
+text FabledIsland_Neo_MagmaGrunt4_Defeat_Text {
+    format("ffsssshhhh, I fizzled out")
+}
+
+text FabledIsland_Neo_AquaGrunt5_Intro_Text {
+    format("We're just a taste of what's to come, our bosses are waiting for you ahead.")
+}
+
+text FabledIsland_Neo_AquaGrunt5_Defeat_Text {
+    format("Just wait till you face them.")
+}
+
+text FabledIsland_Neo_MagmaGrunt5_Intro_Text {
+    format("Our bosses are the strongest, we'll just soften you up for them")
+}
+
+text FabledIsland_Neo_MagmaGrunt5_Defeat_Text {
+    format("Maybe I lost because I'm relying too much on our boss")
+}
+
+script FabledIsland_EventScript_NeoMagmaBattle1 {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_4, FabledIsland_Neo_MagmaGrunt1_Intro_Text, FabledIsland_Neo_MagmaGrunt1_Defeat_Text)
+	msgbox(FabledIsland_Neo_MagmaGrunt1_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoMagmaBattle2 {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_5, FabledIsland_Neo_MagmaGrunt2_Intro_Text, FabledIsland_Neo_MagmaGrunt2_Defeat_Text)
+	msgbox(FabledIsland_Neo_MagmaGrunt2_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoMagmaBattle3 {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_6, FabledIsland_Neo_MagmaGrunt3_Intro_Text, FabledIsland_Neo_MagmaGrunt3_Defeat_Text)
+	msgbox(FabledIsland_Neo_MagmaGrunt3_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoMagmaBattle4 {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_7, FabledIsland_Neo_MagmaGrunt4_Intro_Text, FabledIsland_Neo_MagmaGrunt4_Defeat_Text)
+	msgbox(FabledIsland_Neo_MagmaGrunt4_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoMagmaBattle5 {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_8, FabledIsland_Neo_MagmaGrunt5_Intro_Text, FabledIsland_Neo_MagmaGrunt5_Defeat_Text)
+	msgbox(FabledIsland_Neo_MagmaGrunt5_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoAquaBattle1 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_3, FabledIsland_Neo_AquaGrunt1_Intro_Text, FabledIsland_Neo_AquaGrunt1_Defeat_Text)
+	msgbox(FabledIsland_Neo_AquaGrunt1_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoAquaBattle2 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_4, FabledIsland_Neo_AquaGrunt2_Intro_Text, FabledIsland_Neo_AquaGrunt2_Defeat_Text)
+	msgbox(FabledIsland_Neo_AquaGrunt2_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoAquaBattle3 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_5, FabledIsland_Neo_AquaGrunt3_Intro_Text, FabledIsland_Neo_AquaGrunt3_Defeat_Text)
+	msgbox(FabledIsland_Neo_AquaGrunt3_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoAquaBattle4 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_6, FabledIsland_Neo_AquaGrunt4_Intro_Text, FabledIsland_Neo_AquaGrunt4_Defeat_Text)
+	msgbox(FabledIsland_Neo_AquaGrunt4_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_NeoAquaBattle5 {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_7, FabledIsland_Neo_AquaGrunt5_Intro_Text, FabledIsland_Neo_AquaGrunt5_Defeat_Text)
+	msgbox(FabledIsland_Neo_AquaGrunt5_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+
+
+
+
+

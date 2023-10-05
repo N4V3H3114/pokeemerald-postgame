@@ -67,7 +67,7 @@ script FabledIslandStatue {
 
 script FabledIsland_Route135_EventScript_NeoMagmaBattle1 {
 	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_3, FabledIsland_Route135_Magma_Grunt_1_Intro, FabledIsland_Route135_Magma_Grunt_1_Defeat)
-	msgbox(NeoHideout_Map1_Magma_Grunt_1_Defeat, MSGBOX_NPC)
+	msgbox(FabledIsland_Route135_Magma_Grunt_1_Defeat, MSGBOX_NPC)
 	end
 }
 

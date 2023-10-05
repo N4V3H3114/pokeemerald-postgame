@@ -12529,7 +12529,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_NeoMagmaGruntHideout2[] =
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout3[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout3[] = { //First Grunt on Route 135 / Fabled Island
     {
         .iv = 40,
         .lvl = 79,
@@ -12551,4 +12551,239 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout3[] 
         .species = SPECIES_WIGGLYTUFF,
     }
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout4[] = { //First Grunt on Left Side of Fabled Island
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_CORSOLA,
+    },
+    {
+        .iv = 180,
+        .lvl = 81,
+        .species = SPECIES_SUNFLORA,
+    },
+    {
+        .iv = 180,
+        .lvl = 80,
+        .species = SPECIES_TENTACRUEL,
+    },
+    {
+        .iv = 180,
+        .lvl = 81,
+        .species = SPECIES_IVYSAUR,
+    },
+    {
+        .iv = 180,
+        .lvl = 83,
+        .species = SPECIES_SABLEYE,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout4[] = { //First Grunt on Left Side of Fabled Island
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_CORSOLA,
+    },
+    {
+        .iv = 180,
+        .lvl = 81,
+        .species = SPECIES_SUNFLORA,
+    },
+    {
+        .iv = 180,
+        .lvl = 80,
+        .species = SPECIES_TENTACRUEL,
+    },
+    {
+        .iv = 180,
+        .lvl = 81,
+        .species = SPECIES_IVYSAUR,
+    },
+    {
+        .iv = 180,
+        .lvl = 83,
+        .species = SPECIES_SABLEYE,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout5[] = {
+    {
+        .iv = 180,
+        .lvl = 83,
+        .species = SPECIES_MACHAMP,
+    },
+    {
+        .iv = 180,
+        .lvl = 83,
+        .species = SPECIES_NIDOKING,
+    },
+    {
+        .iv = 180,
+        .lvl = 83,
+        .species = SPECIES_SHELGON,
+    },
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_SCIZOR,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout6[] = {
+    {
+        .iv = 180,
+        .lvl = 85,
+        .species = SPECIES_SLAKING,
+    },
+    {
+        .iv = 180,
+        .lvl = 81,
+        .species = SPECIES_NIDOQUEEN,
+    },
+    {
+        .iv = 180,
+        .lvl = 84,
+        .species = SPECIES_LAIRON,
+    },
+    {
+        .iv = 180,
+        .lvl = 83,
+        .species = SPECIES_ELECTABUZZ,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout7[] = { // Pair With an Aqua Grunt 6
+    {
+        .iv = 180,
+        .lvl = 84,
+        .species = SPECIES_CHARIZARD,
+    },
+    {
+        .iv = 180,
+        .lvl = 84,
+        .species = SPECIES_BLAZIKEN,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout8[] = { // Pair With an Aqua Grunt
+    {
+        .iv = 180,
+        .lvl = 84,
+        .species = SPECIES_DRAGONITE,
+    },
+    {
+        .iv = 180,
+        .lvl = 84,
+        .species = SPECIES_GOLEM,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout3[] = {
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_NINJASK,
+    },
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_GRUMPIG,
+    },
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_VAPOREON,
+    },
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_GLALIE,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout4[] = {
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_CRAWDAUNT,
+    },
+    {
+        .iv = 180,
+        .lvl = 81,
+        .species = SPECIES_NOCTOWL,
+    },
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_GYARADOS,
+    },
+    {
+        .iv = 180,
+        .lvl = 83,
+        .species = SPECIES_HITMONTOP,
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout5[] = {
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_METANG,
+    },
+    {
+        .iv = 180,
+        .lvl = 81,
+        .species = SPECIES_BUTTERFREE,
+    },
+    {
+        .iv = 180,
+        .lvl = 82,
+        .species = SPECIES_LUNATONE,
+    },
+    {
+        .iv = 180,
+        .lvl = 83,
+        .species = SPECIES_MANECTRIC,
+    }
+};
+
+static const struct TrainerMonNoItemCustomMoves sParty_NeoAquaGruntHideout6[] = { //teams up with magma grunt 7
+    {
+    .iv = 50,
+    .lvl = 84,
+    .species = SPECIES_BLASTOISE,
+    .moves = {MOVE_BLIZZARD, MOVE_SURF, MOVE_HYDRO_PUMP, MOVE_IRON_TAIL}
+    },
+    {
+    .iv = 50,
+    .lvl = 84,
+    .species = SPECIES_DEWGONG,
+    .moves = {MOVE_SURF, MOVE_SIGNAL_BEAM, MOVE_BLIZZARD, MOVE_ICICLE_SPEAR}
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout7[] = {
+    {
+        .iv = 180,
+        .lvl = 84,
+        .species = SPECIES_GARDEVOIR,
+    },
+    {
+        .iv = 180,
+        .lvl = 84,
+        .species = SPECIES_HARIYAMA,
+    },
+};
+
+
+
+
+
+
+
+
+
+
 
