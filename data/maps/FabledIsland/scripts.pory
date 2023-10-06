@@ -92,6 +92,11 @@ text FabledIsland_Neo_MagmaGrunt5_Defeat_Text {
     format("Maybe I lost because I'm relying too much on our boss")
 }
 
+script FabledIsland_EventScript_PondWoman {
+	msgbox(FabledIsland_EventScript_PondWoman, MSGBOX_NPC)
+	end
+}
+
 script FabledIsland_EventScript_NeoMagmaBattle1 {
 	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_4, FabledIsland_Neo_MagmaGrunt1_Intro_Text, FabledIsland_Neo_MagmaGrunt1_Defeat_Text)
 	msgbox(FabledIsland_Neo_MagmaGrunt1_Defeat_Text, MSGBOX_NPC)
@@ -124,7 +129,7 @@ script FabledIsland_EventScript_NeoMagmaBattle5 {
 
 script FabledIsland_EventScript_NeoAquaBattle1 {
 	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_3, FabledIsland_Neo_AquaGrunt1_Intro_Text, FabledIsland_Neo_AquaGrunt1_Defeat_Text)
-	msgbox(FabledIsland_Neo_AquaGrunt1_Defeat_Text, MSGBOX_NPC)
+	msgbox(FabledIsland_Neo_AquaGrunt1_Post_Defeat_Text, MSGBOX_NPC)
 	end
 }
 

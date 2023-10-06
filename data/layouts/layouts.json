@@ -4425,7 +4425,7 @@
       "id": "LAYOUT_FABLED_ISLAND",
       "name": "FabledIsland_Layout",
       "width": 60,
-      "height": 120,
+      "height": 122,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_FabledTileset",
       "border_filepath": "data/layouts/FabledIsland/border.bin",
