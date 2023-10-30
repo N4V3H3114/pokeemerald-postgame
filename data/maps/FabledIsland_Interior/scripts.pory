@@ -1,0 +1,65 @@
+raw `
+    FabledIsland_Interior_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION FabledIsland_Interior_OnLoad
+	.byte 0
+
+    FabledIsland_Interior_OnLoad:
+	call_if_unset FLAG_FABLED_ISLAND_HORDE_BEATEN, FabledIsland_Interior_ResetHorde
+	end
+    `
+
+script FabledIsland_Interior_ResetHorde {
+	cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_1)
+    cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_2)
+    cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_3)
+    cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_4)
+    cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_5)     
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_10)      
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_11)      
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_12)
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_13)
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_14)
+}
+
+script FabledIsland_Interior_EnterRival {
+    checkplayergender
+    if(var(VAR_RESULT) == MALE) {
+        playbgm(MUS_ENCOUNTER_MAY, FALSE)
+    } else {
+        playbgm(MUS_ENCOUNTER_BRENDAN, FALSE)
+    }
+}
+
+text FabledIsland_Interior_StopRightThere {
+	format("Stop right there punk!")
+}
+
+text FabledIsland_Interior_BadTime {
+    format("He he he, hope we caught you at a bad time!\p")
+}
+
+text FabledIsland_Interior_GotYouSurrounded {
+    format("You may have beaten our Admins, but you can't beat all of us!\pYou're strong, but our numbers will beat you and your Pokemon down. There will be no rest for you!\pGet ready for our Ultra-Neo-Gang-Beat-Up")
+}
+
+text FabledIsland_Interior_RivalEntry_May {
+    format("May: Now you hold it!")
+}
+
+text FabledIsland_Interior_RivalAssure_May {
+    format("May: When I saw you chasing the Aqua grunt, and seeing a new base, then watching you fly off... I couldn't just sit by and watch.\p We're rivals right? And if we fight together, then no matter how many there are, we can finish them together!")
+}
+
+text FabledIsland_Interior_RivalEntry_Brendan {
+    format("Brendan: Now you hold it!")
+}
+
+text FabledIsland_Interior_RivalAssure_Brendan {
+    format("Brendan: When I saw you chasing the Aqua grunt, and seeing a new base, then watching you fly off... I couldn't just sit by and watch.\p We're rivals right? And if we fight together, then no matter how many there are, we can finish them together!")
+}
+
+text FabledIsland_Interior_ItDoesntMatter {
+    format("Neo Grunt: Another one won't make a difference, we've got this, now let's stomp them!\pGrunts: YEAAAAAHHH!!!!")
+}
+
+
