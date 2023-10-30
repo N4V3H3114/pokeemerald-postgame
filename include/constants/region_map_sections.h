@@ -215,7 +215,7 @@
 #define MAPSEC_NAVEL_ROCK                   0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
 #define MAPSEC_ROUTE_135                    0xD5
-#define MAPSEC_FABLED_ISLAND                       0xD6
+#define MAPSEC_FABLED_ISLAND                0xD6
 #define MAPSEC_NONE                         0xD7
 
 #define METLOC_SPECIAL_EGG                  0xFD

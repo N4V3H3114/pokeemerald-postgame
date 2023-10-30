@@ -92,6 +92,22 @@ text FabledIsland_Neo_MagmaGrunt5_Defeat_Text {
     format("Maybe I lost because I'm relying too much on our boss")
 }
 
+text FabledIsland_Garrett_Intro_Text {
+	format("I heard the forecast calls for rain - don’t forget an umbrella!")
+}
+
+text FabledIsland_Garrett_Defeat_Text {
+	format("You really rained on our parade...")
+}
+
+text FabledIsland_Trevor_Intro_Text {
+	format("It’s looking like it’ll be sunny, I hope you brought your sunscreen!")
+}
+
+text FabledIsland_Trevor_Defeat_Text {
+	format("We must have burnt too brightly...")
+}
+
 script FabledIsland_EventScript_PondWoman {
 	msgbox(FabledIsland_EventScript_PondWoman, MSGBOX_NPC)
 	end
@@ -157,6 +173,17 @@ script FabledIsland_EventScript_NeoAquaBattle5 {
 	end
 }
 
+script FabledIsland_EventScript_AdminGarrett {
+	trainerbattle_single(TRAINER_GRUNT_AQUA_HIDEOUT_8, FabledIsland_Garrett_Intro_Text, FabledIsland_Garrett_Defeat_Text)
+	msgbox(FabledIsland_Garrett_Defeat_Text, MSGBOX_NPC)
+	end
+}
+
+script FabledIsland_EventScript_AdminTrevor {
+	trainerbattle_single(TRAINER_GRUNT_MAGMA_HIDEOUT_9, FabledIsland_Trevor_Intro_Text, FabledIsland_Trevor_Defeat_Text)
+	msgbox(FabledIsland_Trevor_Defeat_Text, MSGBOX_NPC)
+	end
+}
 
 
 
