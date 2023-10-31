@@ -1,7 +1,44 @@
 raw `
 Route135_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION Route135_OnLoad
 	.byte 0
+
+	FabledIsland_Interior_OnLoad:
+	goto FabledIsland_Interior_ResetHorde
+	end
 `
+
+script FabledIsland_Interior_ResetHorde {
+	cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_1) 
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_2)       
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_3)       
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_4)       
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_5)       
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_6)       
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_7)       
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_8)       
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_9)       
+	cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_1)
+	cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_2) 
+	cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_3) 
+	cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_4) 
+	cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_5) 
+	cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_6) 
+	cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_7) 
+	cleartrainerflag(TRAINER_GRUNT_AQUA_HIDEOUT_8)
+
+	//Horde Trainers
+	cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_1)
+    cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_2)
+    cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_3)
+    cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_4)
+    cleartrainerflag(TRAINER_GRUNT_SEAFLOOR_CAVERN_5)     
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_10)      
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_11)      
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_12)
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_13)
+    cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_14)
+}
 
 text FabledIslandBeachBoy_Text {
 	format ("Waaaaahh! These Pokemon are really scary!\pHm? Wait you're {PLAYER} the Champion right? Are you here about those weird guys that showed up?\p...\pWow that's awesome I get to meet the Champion before he goes into battle. I'm rooting for you!")
