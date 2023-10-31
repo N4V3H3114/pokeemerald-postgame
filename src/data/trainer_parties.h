@@ -12667,7 +12667,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout7[] 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout8[] = { // Pair With an Aqua Grunt
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout8[] = { // Pair With an Aqua Grunt 7
     {
         .iv = 180,
         .lvl = 84,
@@ -12764,7 +12764,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_NeoAquaGruntHideout6[] = 
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout7[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout7[] = { //teams up with magma grunt 8
     {
         .iv = 180,
         .lvl = 84,
@@ -12776,6 +12776,82 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoAquaGruntHideout7[] =
         .species = SPECIES_HARIYAMA,
     },
 };
+
+static const struct TrainerMonItemCustomMoves sParty_AdminTrevor[] = {
+    {
+    .iv = 255,
+    .lvl = 82,
+    .species = SPECIES_BLAZIKEN,
+    .heldItem = ITEM_CHARCOAL,
+    .moves = {MOVE_SUNNY_DAY, MOVE_OVERHEAT, MOVE_SKY_UPPERCUT, MOVE_ROCK_SLIDE}
+    },
+    {
+    .iv = 255,
+    .lvl = 82,
+    .species = SPECIES_BELLOSSOM,
+    .heldItem = ITEM_MIRACLE_SEED,
+    .moves = {MOVE_SUNNY_DAY, MOVE_GIGA_DRAIN, MOVE_SOLAR_BEAM, MOVE_SLEEP_POWDER}
+    },
+    {
+    .iv = 255,
+    .lvl = 83,
+    .species = SPECIES_CROBAT,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_AERIAL_ACE, MOVE_SUNNY_DAY}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_AdminTrevor[] = {
+    {
+    .iv = 255,
+    .lvl = 82,
+    .species = SPECIES_BLAZIKEN,
+    .heldItem = ITEM_CHARCOAL,
+    .moves = {MOVE_SUNNY_DAY, MOVE_OVERHEAT, MOVE_SKY_UPPERCUT, MOVE_ROCK_SLIDE}
+    },
+    {
+    .iv = 255,
+    .lvl = 82,
+    .species = SPECIES_BELLOSSOM,
+    .heldItem = ITEM_MIRACLE_SEED,
+    .moves = {MOVE_SUNNY_DAY, MOVE_GIGA_DRAIN, MOVE_SOLAR_BEAM, MOVE_SLEEP_POWDER}
+    },
+    {
+    .iv = 255,
+    .lvl = 83,
+    .species = SPECIES_CROBAT,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_AERIAL_ACE, MOVE_SUNNY_DAY}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_AdminGarrett[] = {
+    {
+    .iv = 255,
+    .lvl = 82,
+    .species = SPECIES_MILOTIC,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_MIRROR_COAT, MOVE_LIGHT_SCREEN}
+    },
+    {
+    .iv = 255,
+    .lvl = 82,
+    .species = SPECIES_BLASTOISE,
+    .heldItem = ITEM_MYSTIC_WATER,
+    .moves = {MOVE_RAIN_DANCE, MOVE_SURF, MOVE_SUBSTITUTE, MOVE_PROTECT}
+    },
+    {
+    .iv = 255,
+    .lvl = 83,
+    .species = SPECIES_KINGDRA,
+    .heldItem = ITEM_FOCUS_BAND,
+    .moves = {MOVE_DRAGON_DANCE, MOVE_RAIN_DANCE, MOVE_OCTAZOOKA, MOVE_DIVE}
+    }
+};
+
+
+
+
 
 
 
