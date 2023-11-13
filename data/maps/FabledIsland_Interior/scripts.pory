@@ -53,6 +53,9 @@ script FabledIsland_Interior_EventScript_Horde {
     msgbox(FabledIsland_Interior_StopRightThere, MSGBOX_DEFAULT)
     applymovement(2, Horde_Grunt_Magma_1)
     applymovement(3, Horde_Grunt_Aqua_2)
+    applymovement(4, Horde_Grunt_Aqua_3)
+    applymovement(5, Horde_Grunt_Magma_4)
+    applymovement(6, Horde_Grunt_Aqua_5)
 }
 
 movement Movement_Walk_To_Center {
@@ -73,7 +76,54 @@ movement Horde_Grunt_Aqua_2 { //obj id 3
     walk_fast_up * 4
     walk_fast_right * 3
     walk_fast_up * 3
+    walk_in_place_left
 }
 
+movement Horde_Grunt_Aqua_3 { //obj id 4
+    walk_in_place_up * 2
+    walk_fast_up * 4
+    walk_fast_right * 3
+    walk_fast_up * 6
+    walk_in_place_down
+}
+
+movement Horde_Grunt_Magma_4 { //obj id 5
+    walk_in_place_up * 3
+    walk_fast_up * 4
+    walk_fast_left * 3
+    walk_fast_up * 2
+}
+
+movement Horde_Grunt_Aqua_5 { //obj id 6
+    walk_in_place_up * 4
+    walk_fast_up * 4
+    walk_fast_left * 3
+    walk_fast_up * 7
+    walk_in_place_down
+}
+
+movement Horde_Grunt_Magma_6 { //obj id 7
+    walk_in_place_up * 5
+    walk_fast_up * 4
+    walk_fast_left * 4
+    walk_fast_up * 2
+    walk_in_place_right
+}
+
+movement Horde_Grunt_Magma_7 { //obj id 8
+    walk_in_place_up * 6
+    walk_fast_up * 5
+    walk_fast_left
+    walk_in_place_up
+}
+
+movement Horde_Grunt_Aqua_8 { //obj id 9
+    walk_in_place_up * 7
+    walk_fast_up * 4
+    walk_fast_right *4
+    walk_fast_up * 8
+    walk_fast_left * 4
+    walk_in_place_down
+}
 
 
