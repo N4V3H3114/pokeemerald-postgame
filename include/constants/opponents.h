@@ -193,8 +193,8 @@
 #define TRAINER_DAISUKE                     189
 #define TRAINER_ATSUSHI                     190
 #define TRAINER_KIRK                        191
-#define TRAINER_GRUNT_AQUA_HIDEOUT_7        192
-#define TRAINER_GRUNT_AQUA_HIDEOUT_8        193
+#define TRAINER_GRUNT_AQUA_HIDEOUT_7        192 //last grunt on fabled island pt 1
+#define TRAINER_GRUNT_AQUA_HIDEOUT_8        193  //Garrett
 #define TRAINER_SHAWN                       194
 #define TRAINER_FERNANDO_1                  195
 #define TRAINER_DALTON_1                    196
@@ -724,8 +724,8 @@
 #define TRAINER_GRUNT_MAGMA_HIDEOUT_5       720
 #define TRAINER_GRUNT_MAGMA_HIDEOUT_6       721
 #define TRAINER_GRUNT_MAGMA_HIDEOUT_7       722
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_8       723
-#define TRAINER_GRUNT_MAGMA_HIDEOUT_9       724
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_8       723 
+#define TRAINER_GRUNT_MAGMA_HIDEOUT_9       724 // trevor
 #define TRAINER_GRUNT_MAGMA_HIDEOUT_10      725
 #define TRAINER_GRUNT_MAGMA_HIDEOUT_11      726
 #define TRAINER_GRUNT_MAGMA_HIDEOUT_12      727

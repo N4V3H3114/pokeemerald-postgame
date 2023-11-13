@@ -46,9 +46,34 @@ text FabledIsland_Interior_ItDoesntMatter {
 
 script FabledIsland_Interior_EventScript_Horde {
     lockall
-    msgbox(FabledIsland_Interior_StopRightThere, MSGBOX_DEFAULT)
+    applymovement(OBJ_EVENT_ID_PLAYER, movement_walk_to_center)
+    applymovement(OBJ_EVENT_ID_PLAYER, emote_exclamation_mark)
     playse(SE_PIN)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
-    
+    waitmovement
+    msgbox(FabledIsland_Interior_StopRightThere, MSGBOX_DEFAULT)
+    applymovement(2, Horde_Grunt_Magma_1)
+    applymovement(3, Horde_Grunt_Aqua_2)
 }
+
+movement Movement_Walk_To_Center {
+    walk_up * 8
+    emote_exclamation_mark
+    face_down
+}
+
+movement Horde_Grunt_Magma_1 { //obj id 2
+    walk_fast_up * 4
+    walk_fast_left * 5
+    walk_fast_up * 5
+    walk_fast_right
+}
+
+movement Horde_Grunt_Aqua_2 { //obj id 3
+    walk_in_place_up
+    walk_fast_up * 4
+    walk_fast_right * 3
+    walk_fast_up * 3
+}
+
+
 
