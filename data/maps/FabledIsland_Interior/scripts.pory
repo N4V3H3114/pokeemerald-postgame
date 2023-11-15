@@ -49,13 +49,30 @@ script FabledIsland_Interior_EventScript_Horde {
     applymovement(OBJ_EVENT_ID_PLAYER, movement_walk_to_center)
     applymovement(OBJ_EVENT_ID_PLAYER, emote_exclamation_mark)
     playse(SE_PIN)
-    waitmovement
-    msgbox(FabledIsland_Interior_StopRightThere, MSGBOX_DEFAULT)
+    waitmovement(0)
+    msgbox(FabledIsland_Interior_StopRightThere, MSGBOX_AUTOCLOSE)
     applymovement(2, Horde_Grunt_Magma_1)
     applymovement(3, Horde_Grunt_Aqua_2)
     applymovement(4, Horde_Grunt_Aqua_3)
     applymovement(5, Horde_Grunt_Magma_4)
     applymovement(6, Horde_Grunt_Aqua_5)
+    applymovement(7, Horde_Grunt_Magma_6)
+    applymovement(8, Horde_Grunt_Magma_7)
+    applymovement(9, Horde_Grunt_Aqua_8)
+    applymovement(10, Horde_Grunt_Magma_9)
+    applymovement(11, Horde_Grunt_Aqua_10)
+    applymovement(12, Horde_Grunt_Aqua_11)
+    applymovement(13, Horde_Grunt_Magma_12)
+    waitmovement(13)
+    msgbox(FabledIsland_Interior_BadTime, MSGBOX_DEFAULT)
+    msgbox(FabledIsland_Interior_GotYouSurrounded, MSGBOX_DEFAULT)
+    checkplayergender //0 is male, 1 is female
+    if (var(VAR_RESULT) == 0) { // if rival is may
+        msgbox(FabledIsland_Interior_RivalEntry_May, MSGBOX_DEFAULT)
+        applymovement(14, Rival_Walk_To_Center)
+        waitmovement(14)
+        msgbox(FabledIsland_Interior_RivalAssure_May, MSGBOX_DEFAULT)
+    }
 }
 
 movement Movement_Walk_To_Center {
@@ -126,4 +143,40 @@ movement Horde_Grunt_Aqua_8 { //obj id 9
     walk_in_place_down
 }
 
+movement Horde_Grunt_Magma_9 { //obj id 10
+    walk_in_place_up * 8
+    walk_fast_up * 4
+    walk_fast_left * 2
+    walk_fast_up * 8
+    walk_fast_right
+    walk_in_place_down
+}
+
+movement Horde_Grunt_Aqua_10 { //obj id 11
+    walk_in_place_up * 9
+    walk_fast_up * 5
+}
+
+movement Horde_Grunt_Aqua_11 { //obj id 12
+    walk_in_place_up * 10
+    walk_fast_up * 4
+    walk_fast_right * 4
+    walk_fast_up * 6
+    walk_fast_left * 1
+}
+
+movement Horde_Grunt_Magma_12 { //obj id 13
+    walk_in_place_up * 11
+    walk_fast_up * 4
+    walk_fast_right * 2
+    walk_fast_up * 2
+}
+
+movement Rival_Walk_To_Center { //obj id 14
+    walk_fast_up * 3
+    walk_fast_right 
+    walk_fast_up * 5
+    walk_fast_left
+    walk_in_place_down
+}
 
