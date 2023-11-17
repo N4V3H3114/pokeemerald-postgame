@@ -30,12 +30,7 @@
     },
     {
       "map": "MAP_ROUTE135",
-      "offset": 17,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_ROUTE135",
-      "offset": 17,
+      "offset": 7,
       "direction": "down"
     }
   ],

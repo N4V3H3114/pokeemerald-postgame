@@ -3,12 +3,12 @@ Route135_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION Route135_OnLoad
 	.byte 0
 
-	FabledIsland_Interior_OnLoad:
-	goto FabledIsland_Interior_ResetHorde
+	Route135_OnLoad:
+	goto FabledIsland_Reset_Grunts
 	end
 `
 
-script FabledIsland_Interior_ResetHorde {
+script FabledIsland_Reset_Grunts {
 	cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_1) 
     cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_2)       
     cleartrainerflag(TRAINER_GRUNT_MAGMA_HIDEOUT_3)       
@@ -89,6 +89,7 @@ script FabledIslandTrees {
 }
 
 script FabledIslandWillYouSaveIt {
+	applymovement(3, WillYouSaveIt_FacePlayer)
 	msgbox(TreasuresOfTheIsland_Text, MSGBOX_YESNO)
 	if (var(VAR_RESULT) == 1) {
             msgbox(TreasuresOfTheIsland_Yes_Text, MSGBOX_NPC)
@@ -96,6 +97,10 @@ script FabledIslandWillYouSaveIt {
 		else {
 			msgbox(TreasuresOfTheIsland_No_Text, MSGBOX_NPC)
 		}
+}
+
+movement WillYouSaveIt_FacePlayer {
+	face_player
 }
 
 script FabledIslandStatue {

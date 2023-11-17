@@ -2326,7 +2326,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_AdminGarrett),
+        .party = ITEM_CUSTOM_MOVES(sParty_AdminGarrett),
     },
 
     [TRAINER_SHAWN] =
@@ -8698,7 +8698,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_AdminTrevor),
+        .party = ITEM_CUSTOM_MOVES(sParty_AdminTrevor),
     },
 
     [TRAINER_GRUNT_MAGMA_HIDEOUT_10] =

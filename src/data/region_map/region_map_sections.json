@@ -409,7 +409,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_FABLED_ISLAND",
+      "map_section": "MAPSEC_FABLED_ISLAND",
       "name": "FABLED ISLAND",
       "x": 11,
       "y": 7,
@@ -417,7 +417,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_FABLED_ISLAND_SUMMIT",
+      "map_section": "MAPSEC_FABLED_ISLAND_SUMMIT",
       "name": "FABLED ISLAND SUMMIT",
       "x": 12,
       "y": 7,

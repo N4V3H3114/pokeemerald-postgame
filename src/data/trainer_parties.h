@@ -12580,34 +12580,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout4[] 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout4[] = { //First Grunt on Left Side of Fabled Island
-    {
-        .iv = 180,
-        .lvl = 82,
-        .species = SPECIES_CORSOLA,
-    },
-    {
-        .iv = 180,
-        .lvl = 81,
-        .species = SPECIES_SUNFLORA,
-    },
-    {
-        .iv = 180,
-        .lvl = 80,
-        .species = SPECIES_TENTACRUEL,
-    },
-    {
-        .iv = 180,
-        .lvl = 81,
-        .species = SPECIES_IVYSAUR,
-    },
-    {
-        .iv = 180,
-        .lvl = 83,
-        .species = SPECIES_SABLEYE,
-    }
-};
-
 static const struct TrainerMonNoItemDefaultMoves sParty_NeoMagmaGruntHideout5[] = {
     {
         .iv = 180,
@@ -12952,7 +12924,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_MagmaHorde5[] = { //Self 
         .species = SPECIES_SHIFTRY,
         .moves = {MOVE_EXPLOSION, MOVE_RAZOR_LEAF, MOVE_RAZOR_WIND, MOVE_NONE}
     },
-}
+};
 
 static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde6[] = {
     {

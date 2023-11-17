@@ -109,7 +109,7 @@ text FabledIsland_Trevor_Defeat_Text {
 }
 
 script FabledIsland_EventScript_PondWoman {
-	msgbox(FabledIsland_EventScript_PondWoman, MSGBOX_NPC)
+	msgbox(FabledIsland_Left_Path_Woman_Text, MSGBOX_NPC)
 	end
 }
 

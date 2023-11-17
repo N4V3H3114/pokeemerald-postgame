@@ -16,7 +16,7 @@ LilycoveCity_OnTransition:
 
 LilycoveCity_OnLoad:
 	call_if_unset FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_SetWailmerMetatiles
-	call_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_UnsetOldFlags
+	call_if_unset FLAG_NEO_AQUA_LILYCOVE_MET, LilycoveCity_EventScript_UnsetOldFlags
 	end
 
 LilycoveCity_EventScript_SetWailmerMetatiles::
@@ -798,12 +798,21 @@ LilycoveCity_EventScript_NeoAquaBattle::
 LilycoveCity_EventScript_PostAquaBattle::
 	lockall
 	msgbox LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	goto_if_eq VAR_RESULT, DIR_EAST, NeoAqua_ExitEast
+	compare VAR_RESULT, DIR_EAST
+	goto_if_eq LilycoveCity_EventScript_PostAquaBattle_2
 	applymovement 23, NeoAqua_ExitLeft
+LilycoveCity_EventScript_PostAquaBattle_1:
 	waitmovement 23
 	removeobject 23
 	setflag FLAG_NEO_AQUA_LILYCOVE_MET
 	release
 	return
+
+LilycoveCity_EventScript_PostAquaBattle_2:
+	applymovement 23, NeoAqua_ExitEast
+	goto LilycoveCity_EventScript_PostAquaBattle_1
 
 
 NeoAqua_ExitEast:

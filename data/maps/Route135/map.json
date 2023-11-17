@@ -15,12 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE118",
-      "offset": -11,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_ROUTE118",
-      "offset": -16,
+      "offset": -7,
       "direction": "up"
     }
   ],
@@ -73,7 +68,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "0",
+      "trainer_sight_or_berry_tree_id": "6",
       "script": "FabledIsland_Route135_EventScript_NeoMagmaBattle1",
       "flag": "0"
     },
@@ -92,7 +87,27 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 28,
+      "y": 73,
+      "elevation": 0,
+      "dest_map": "MAP_FABLED_ISLAND",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 29,
+      "y": 73,
+      "elevation": 0,
+      "dest_map": "MAP_FABLED_ISLAND",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 30,
+      "y": 73,
+      "elevation": 0,
+      "dest_map": "MAP_FABLED_ISLAND",
+      "dest_warp_id": "2"
+    }
   ],
   "coord_events": [
 

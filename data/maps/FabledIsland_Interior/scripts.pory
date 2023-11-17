@@ -1,7 +1,11 @@
-raw `
-    FabledIsland_Interior_MapScripts::
-	.byte 0
-    `
+mapscripts FabledIsland_Interior_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SetupRivalGfxId
+}
+
+script SetupRivalGfxId {
+    removeobject(13)
+    call(Common_EventScript_SetupRivalGfxId)
+}
 
 script FabledIsland_Interior_EnterRival {
     checkplayergender
@@ -17,7 +21,7 @@ text FabledIsland_Interior_StopRightThere {
 }
 
 text FabledIsland_Interior_BadTime {
-    format("He he he, hope we caught you at a bad time!\p")
+    format("He he he, hope we caught you at a bad time!")
 }
 
 text FabledIsland_Interior_GotYouSurrounded {
@@ -29,7 +33,7 @@ text FabledIsland_Interior_RivalEntry_May {
 }
 
 text FabledIsland_Interior_RivalAssure_May {
-    format("May: When I saw you chasing the Aqua grunt, and seeing a new base, then watching you fly off... I couldn't just sit by and watch.\p We're rivals right? And if we fight together, then no matter how many there are, we can finish them together!")
+    format("May: I saw you chasing after the Aqua grunt, but you flew off before I could reach you. I always seem to be playing catch up...\pYou may be the Champion")
 }
 
 text FabledIsland_Interior_RivalEntry_Brendan {
@@ -46,32 +50,49 @@ text FabledIsland_Interior_ItDoesntMatter {
 
 script FabledIsland_Interior_EventScript_Horde {
     lockall
-    applymovement(OBJ_EVENT_ID_PLAYER, movement_walk_to_center)
-    applymovement(OBJ_EVENT_ID_PLAYER, emote_exclamation_mark)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_Walk_To_Center)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
     playse(SE_PIN)
-    waitmovement(0)
-    msgbox(FabledIsland_Interior_StopRightThere, MSGBOX_AUTOCLOSE)
-    applymovement(2, Horde_Grunt_Magma_1)
-    applymovement(3, Horde_Grunt_Aqua_2)
-    applymovement(4, Horde_Grunt_Aqua_3)
-    applymovement(5, Horde_Grunt_Magma_4)
-    applymovement(6, Horde_Grunt_Aqua_5)
-    applymovement(7, Horde_Grunt_Magma_6)
-    applymovement(8, Horde_Grunt_Magma_7)
-    applymovement(9, Horde_Grunt_Aqua_8)
-    applymovement(10, Horde_Grunt_Magma_9)
-    applymovement(11, Horde_Grunt_Aqua_10)
-    applymovement(12, Horde_Grunt_Aqua_11)
-    applymovement(13, Horde_Grunt_Magma_12)
-    waitmovement(13)
+    addobject(1)
+    addobject(2)
+    addobject(3)
+    addobject(4)
+    addobject(5)
+    addobject(6)
+    addobject(7)
+    addobject(8)
+    addobject(9)
+    addobject(10)
+    addobject(11)
+    addobject(12)
+    addobject(13)
+    msgbox(FabledIsland_Interior_StopRightThere, MSGBOX_DEFAULT)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerFaceUp)
+    applymovement(1, Horde_Grunt_Magma_1)
+    applymovement(2, Horde_Grunt_Aqua_2)
+    applymovement(3, Horde_Grunt_Aqua_3)
+    applymovement(4, Horde_Grunt_Magma_4)
+    applymovement(5, Horde_Grunt_Aqua_5)
+    applymovement(6, Horde_Grunt_Magma_6)
+    applymovement(7, Horde_Grunt_Magma_7)
+    applymovement(8, Horde_Grunt_Aqua_8)
+    applymovement(9, Horde_Grunt_Magma_9)
+    applymovement(10, Horde_Grunt_Aqua_10)
+    applymovement(11, Horde_Grunt_Aqua_11)
+    applymovement(12, Horde_Grunt_Magma_12)
+    waitmovement(12)
     msgbox(FabledIsland_Interior_BadTime, MSGBOX_DEFAULT)
     msgbox(FabledIsland_Interior_GotYouSurrounded, MSGBOX_DEFAULT)
     checkplayergender //0 is male, 1 is female
     if (var(VAR_RESULT) == 0) { // if rival is may
         msgbox(FabledIsland_Interior_RivalEntry_May, MSGBOX_DEFAULT)
-        applymovement(14, Rival_Walk_To_Center)
-        waitmovement(14)
+        closemessage
+        applymovement(13, Rival_Walk_To_Center)
+        waitmovement(13)
         msgbox(FabledIsland_Interior_RivalAssure_May, MSGBOX_DEFAULT)
+        applymovement(9, Horde_Grunt_Talk_Movement_9)
+        msgbox(FabledIsland_Interior_ItDoesntMatter, MSGBOX_DEFAULT)
     }
 }
 
@@ -81,37 +102,48 @@ movement Movement_Walk_To_Center {
     face_down
 }
 
-movement Horde_Grunt_Magma_1 { //obj id 2
-    walk_fast_up * 4
-    walk_fast_left * 5
-    walk_fast_up * 5
-    walk_fast_right
+movement PlayerFaceUp {
+    delay_16 * 2
+    face_up
 }
 
-movement Horde_Grunt_Aqua_2 { //obj id 3
-    walk_in_place_up
-    walk_fast_up * 4
-    walk_fast_right * 3
-    walk_fast_up * 3
-    walk_in_place_left
-}
-
-movement Horde_Grunt_Aqua_3 { //obj id 4
-    walk_in_place_up * 2
-    walk_fast_up * 4
-    walk_fast_right * 3
-    walk_fast_up * 6
+movement Horde_Grunt_Talk_Movement_9 {
     walk_in_place_down
 }
 
-movement Horde_Grunt_Magma_4 { //obj id 5
+movement Horde_Grunt_Magma_1 { //obj id 1
+    walk_fast_up * 4
+    walk_fast_left * 5
+    walk_fast_up * 6
+    walk_fast_right
+}
+
+movement Horde_Grunt_Aqua_2 { //obj id 2
+    walk_in_place_up
+    walk_fast_up * 4
+    walk_fast_right * 4
+    walk_fast_up * 3
+    walk_fast_left * 1
+    walk_in_place_left
+}
+
+movement Horde_Grunt_Aqua_3 { //obj id 3
+    walk_in_place_up * 2
+    walk_fast_up * 4
+    walk_fast_right * 4
+    walk_fast_up * 7
+    walk_fast_left * 2
+    walk_in_place_down
+}
+
+movement Horde_Grunt_Magma_4 { //obj id 4
     walk_in_place_up * 3
     walk_fast_up * 4
     walk_fast_left * 3
     walk_fast_up * 2
 }
 
-movement Horde_Grunt_Aqua_5 { //obj id 6
+movement Horde_Grunt_Aqua_5 { //obj id 5
     walk_in_place_up * 4
     walk_fast_up * 4
     walk_fast_left * 3
@@ -119,22 +151,22 @@ movement Horde_Grunt_Aqua_5 { //obj id 6
     walk_in_place_down
 }
 
-movement Horde_Grunt_Magma_6 { //obj id 7
+movement Horde_Grunt_Magma_6 { //obj id 6 woman
     walk_in_place_up * 5
     walk_fast_up * 4
     walk_fast_left * 4
-    walk_fast_up * 2
+    walk_fast_up * 3
     walk_in_place_right
 }
 
-movement Horde_Grunt_Magma_7 { //obj id 8
+movement Horde_Grunt_Magma_7 { //obj id 7
     walk_in_place_up * 6
     walk_fast_up * 5
     walk_fast_left
     walk_in_place_up
 }
 
-movement Horde_Grunt_Aqua_8 { //obj id 9
+movement Horde_Grunt_Aqua_8 { //obj id 8 woman
     walk_in_place_up * 7
     walk_fast_up * 4
     walk_fast_right *4
@@ -143,7 +175,7 @@ movement Horde_Grunt_Aqua_8 { //obj id 9
     walk_in_place_down
 }
 
-movement Horde_Grunt_Magma_9 { //obj id 10
+movement Horde_Grunt_Magma_9 { //obj id 9
     walk_in_place_up * 8
     walk_fast_up * 4
     walk_fast_left * 2
@@ -152,12 +184,12 @@ movement Horde_Grunt_Magma_9 { //obj id 10
     walk_in_place_down
 }
 
-movement Horde_Grunt_Aqua_10 { //obj id 11
+movement Horde_Grunt_Aqua_10 { //obj id 10 woman
     walk_in_place_up * 9
     walk_fast_up * 5
 }
 
-movement Horde_Grunt_Aqua_11 { //obj id 12
+movement Horde_Grunt_Aqua_11 { //obj id 11 
     walk_in_place_up * 10
     walk_fast_up * 4
     walk_fast_right * 4
@@ -165,14 +197,14 @@ movement Horde_Grunt_Aqua_11 { //obj id 12
     walk_fast_left * 1
 }
 
-movement Horde_Grunt_Magma_12 { //obj id 13
+movement Horde_Grunt_Magma_12 { //obj id 12 woman
     walk_in_place_up * 11
     walk_fast_up * 4
     walk_fast_right * 2
     walk_fast_up * 2
 }
 
-movement Rival_Walk_To_Center { //obj id 14
+movement Rival_Walk_To_Center { //obj id 13
     walk_fast_up * 3
     walk_fast_right 
     walk_fast_up * 5

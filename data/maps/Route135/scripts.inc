@@ -1,5 +1,41 @@
 Route135_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION Route135_OnLoad
 	.byte 0
+
+	Route135_OnLoad:
+	goto FabledIsland_Reset_Grunts
+	end
+
+FabledIsland_Reset_Grunts::
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_1
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_2
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_3
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_4
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_5
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_6
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_7
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_8
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_9
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_1
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_2
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_3
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_4
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_5
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_6
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_7
+	cleartrainerflag TRAINER_GRUNT_AQUA_HIDEOUT_8
+	cleartrainerflag TRAINER_GRUNT_SEAFLOOR_CAVERN_1
+	cleartrainerflag TRAINER_GRUNT_SEAFLOOR_CAVERN_2
+	cleartrainerflag TRAINER_GRUNT_SEAFLOOR_CAVERN_3
+	cleartrainerflag TRAINER_GRUNT_SEAFLOOR_CAVERN_4
+	cleartrainerflag TRAINER_GRUNT_SEAFLOOR_CAVERN_5
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_10
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_11
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_12
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_13
+	cleartrainerflag TRAINER_GRUNT_MAGMA_HIDEOUT_14
+	return
+
 
 FabledIslandBeachBoy::
 	msgbox FabledIslandBeachBoy_Text, MSGBOX_NPC
@@ -22,6 +58,7 @@ FabledIslandTrees::
 
 
 FabledIslandWillYouSaveIt::
+	applymovement 3, WillYouSaveIt_FacePlayer
 	msgbox TreasuresOfTheIsland_Text, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq FabledIslandWillYouSaveIt_1
@@ -33,6 +70,10 @@ FabledIslandWillYouSaveIt_1:
 	return
 
 
+WillYouSaveIt_FacePlayer:
+	face_player
+	step_end
+
 FabledIslandStatue::
 	msgbox FabledIslandStatue_Text, MSGBOX_SIGN
 	return
@@ -42,6 +83,11 @@ FabledIsland_Route135_EventScript_NeoMagmaBattle1::
 	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_3, FabledIsland_Route135_Magma_Grunt_1_Intro, FabledIsland_Route135_Magma_Grunt_1_Defeat
 	msgbox NeoHideout_Map1_Magma_Grunt_1_Defeat, MSGBOX_NPC
 	end
+
+
+Route135_FindItem_MaxRevive::
+	finditem ITEM_MAX_REVIVE
+	return
 
 
 FabledIslandBeachBoy_Text::
