@@ -33,7 +33,7 @@ text FabledIsland_Interior_RivalEntry_May {
 }
 
 text FabledIsland_Interior_RivalAssure_May {
-    format("May: I saw you chasing after the Aqua grunt, but you flew off before I could reach you. I always seem to be playing catch up...\pYou may be the Champion")
+    format("May: I saw you chasing after the Aqua grunt, but you flew off before I could reach you. I always seem to be playing catch up...\pYou may be the Champion, but that doesn't mean I'm going to sit back and watch. We're still rivals after all!")
 }
 
 text FabledIsland_Interior_RivalEntry_Brendan {
@@ -41,11 +41,31 @@ text FabledIsland_Interior_RivalEntry_Brendan {
 }
 
 text FabledIsland_Interior_RivalAssure_Brendan {
-    format("Brendan: When I saw you chasing the Aqua grunt, and seeing a new base, then watching you fly off... I couldn't just sit by and watch.\p We're rivals right? And if we fight together, then no matter how many there are, we can finish them together!")
+    format("Brendan: I saw you chasing after the Aqua grunt, but you flew off before I could reach you. I always seem to be playing catch up...\pYou may be the Champion, but that doesn't mean I'm going to sit back and watch. We're still rivals after all!")
 }
 
 text FabledIsland_Interior_ItDoesntMatter {
     format("Neo Grunt: Another one won't make a difference, we've got this, now let's stomp them!\pGrunts: YEAAAAAHHH!!!!")
+}
+
+text FabledIsland_Interior_LoseText1 {
+    format("Tch, I had to go first")
+}
+
+text FabledIsland_Interior_LoseText2 {
+    format("Haha, well your friend there isn't looking too good")
+}
+
+text FabledIsland_Interior_Rival_May_Tired {
+    format("May: Hey {PLAYER}, I'm sorry, I made a critical mistake in that last fight.\pI need some time to heal, please hold them off for me.")
+}
+
+text FabledIsland_Interior_Rival_Brendan_Tired {
+    format("Brendan: Hey {PLAYER}, I'm sorry, I made a critical mistake in that last fight.\pI need some time to heal, please hold them off for me.")
+}
+
+text FabledIsland_Interior_LoseText3 {
+    format("No way, I think we blew our chance to win")
 }
 
 script FabledIsland_Interior_EventScript_Horde {
@@ -68,7 +88,7 @@ script FabledIsland_Interior_EventScript_Horde {
     addobject(13)
     msgbox(FabledIsland_Interior_StopRightThere, MSGBOX_DEFAULT)
     closemessage
-    applymovement(OBJ_EVENT_ID_PLAYER, PlayerFaceUp)
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerFaceUp)  // have grunts enter scene
     applymovement(1, Horde_Grunt_Magma_1)
     applymovement(2, Horde_Grunt_Aqua_2)
     applymovement(3, Horde_Grunt_Aqua_3)
@@ -93,7 +113,44 @@ script FabledIsland_Interior_EventScript_Horde {
         msgbox(FabledIsland_Interior_RivalAssure_May, MSGBOX_DEFAULT)
         applymovement(9, Horde_Grunt_Talk_Movement_9)
         msgbox(FabledIsland_Interior_ItDoesntMatter, MSGBOX_DEFAULT)
+    } else {
+        msgbox(FabledIsland_Interior_RivalEntry_Brendan, MSGBOX_DEFAULT)
+        closemessage
+        applymovement(13, Rival_Walk_To_Center)
+        waitmovement(13)
+        msgbox(FabledIsland_Interior_RivalAssure_Brendan, MSGBOX_DEFAULT)
+        applymovement(9, Horde_Grunt_Talk_Movement_9)
+        msgbox(FabledIsland_Interior_ItDoesntMatter, MSGBOX_DEFAULT)
     }
+    applymovement(1, Horde_Grunt_1_Approach)
+    applymovement(2, Horde_Grunt_2_Approach)
+    waitmovement(1) // 1 has the most movement so it would take the longest 
+    trainerbattle_no_intro(TRAINER_GRUNT_MAGMA_HIDEOUT_10, FabledIsland_Interior_LoseText1)
+    applymovement(1, Horde_Grunt_1_Retreat)
+    applymovement(2, Horde_Grunt_2_Retreat)
+    waitmovement(1)
+    applymovement(3, Horde_Grunt_3_Approach)
+    applymovement(4, Horde_Grunt_4_Approach)
+    waitmovement(4)
+    trainerbattle_no_intro(TRAINER_GRUNT_SEAFLOOR_CAVERN_1, FabledIsland_Interior_LoseText2)
+    applymovement(3, Horde_Grunt_3_Retreat)
+    applymovement(4, Horde_Grunt_4_Retreat)
+    waitmovement(4)
+    checkplayergender //0 is male, 1 is female
+    if (var(VAR_RESULT) == 0) { // if rival is may
+        msgbox(FabledIsland_Interior_Rival_May_Tired, MSGBOX_DEFAULT)
+        closemessage
+    } else {
+        msgbox(FabledIsland_Interior_Rival_Brendan_Tired, MSGBOX_DEFAULT)
+        closemessage
+    }
+    applymovement(5, Horde_Grunt_5_Approach)
+    applymovement(6, Horde_Grunt_6_Approach)
+    waitmovement(6)
+    trainerbattle_no_intro(TRAINER_GRUNT_SEAFLOOR_CAVERN_2, FabledIsland_Interior_LoseText3)
+    applymovement(5, Horde_Grunt_5_Retreat)
+    applymovement(6, Horde_Grunt_6_Retreat)
+    waitmovement(6)
 }
 
 movement Movement_Walk_To_Center {
@@ -103,7 +160,7 @@ movement Movement_Walk_To_Center {
 }
 
 movement PlayerFaceUp {
-    delay_16 * 2
+    delay_16 * 4
     face_up
 }
 
@@ -212,3 +269,69 @@ movement Rival_Walk_To_Center { //obj id 13
     walk_in_place_down
 }
 
+movement Horde_Grunt_1_Approach {
+    walk_right * 4
+    walk_in_place_down
+}
+
+movement Horde_Grunt_1_Retreat {
+    walk_left * 4
+    walk_in_place_right
+}
+
+movement Horde_Grunt_2_Approach {
+    walk_left * 3
+    walk_in_place_up
+}
+
+movement Horde_Grunt_2_Retreat {
+    walk_right * 3
+    walk_in_place_left
+}
+
+movement Horde_Grunt_3_Approach {
+    walk_left * 2
+    walk_down
+}
+
+movement Horde_Grunt_4_Approach {
+    walk_right * 3
+    walk_up
+}
+
+movement Horde_Grunt_3_Retreat {
+    walk_up
+    walk_right * 2
+    face_down
+}
+
+movement Horde_Grunt_4_Retreat {
+    walk_down
+    walk_left * 3
+    face_up
+}
+
+movement Horde_Grunt_5_Approach {
+    walk_down
+    walk_right * 3
+    face_down
+}
+
+movement Horde_Grunt_5_Retreat {
+    walk_left * 3
+    walk_up
+    face_down
+}
+
+movement Horde_Grunt_6_Approach {
+    walk_right * 2
+    walk_up * 2
+    walk_right 
+}
+
+movement Horde_Grunt_6_Retreat {
+    walk_left * 2
+    walk_down * 2
+    walk_left
+    face_right 
+}

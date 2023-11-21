@@ -12815,7 +12815,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde1[] = { //magm
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde2[] = { //magma hideout 10
+static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde2[] = {
     {
         .iv = 150,
         .lvl = 83,
@@ -12863,10 +12863,10 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde3[] = {
         .iv = 150,
         .lvl = 83,
         .species = SPECIES_VILEPLUME
-    }
+    },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde4[] = {
+/*static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde4[] = {
     {
         .iv = 150,
         .lvl = 83,
@@ -12897,9 +12897,9 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde4[] = {
         .lvl = 83,
         .species = SPECIES_VENOMOTH
     }
-};
+};*/
 
-static const struct TrainerMonNoItemCustomMoves sParty_MagmaHorde5[] = { //Self Destruct guy
+static const struct TrainerMonNoItemCustomMoves sParty_MagmaHorde4[] = { //Self Destruct guy
     {
         .iv = 150,
         .lvl = 81,
@@ -12926,7 +12926,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_MagmaHorde5[] = { //Self 
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde6[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde5[] = {
     {
         .iv = 255,
         .lvl = 85,
@@ -12949,7 +12949,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde6[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde7[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde6[] = {
     {
         .iv = 255,
         .lvl = 85,

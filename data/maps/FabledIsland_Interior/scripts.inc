@@ -59,10 +59,45 @@ FabledIsland_Interior_EventScript_Horde::
 	msgbox FabledIsland_Interior_GotYouSurrounded, MSGBOX_DEFAULT
 	checkplayergender
 	compare VAR_RESULT, 0
-	goto_if_eq FabledIsland_Interior_EventScript_Horde_1
+	goto_if_eq FabledIsland_Interior_EventScript_Horde_2
+	msgbox FabledIsland_Interior_RivalEntry_Brendan, MSGBOX_DEFAULT
+	closemessage
+	applymovement 13, Rival_Walk_To_Center
+	waitmovement 13
+	msgbox FabledIsland_Interior_RivalAssure_Brendan, MSGBOX_DEFAULT
+	applymovement 9, Horde_Grunt_Talk_Movement_9
+	msgbox FabledIsland_Interior_ItDoesntMatter, MSGBOX_DEFAULT
+FabledIsland_Interior_EventScript_Horde_1:
+	applymovement 1, Horde_Grunt_1_Approach
+	applymovement 2, Horde_Grunt_2_Approach
+	waitmovement 1
+	trainerbattle_no_intro TRAINER_GRUNT_MAGMA_HIDEOUT_10, FabledIsland_Interior_LoseText1
+	applymovement 1, Horde_Grunt_1_Retreat
+	applymovement 2, Horde_Grunt_2_Retreat
+	waitmovement 1
+	applymovement 3, Horde_Grunt_3_Approach
+	applymovement 4, Horde_Grunt_4_Approach
+	waitmovement 4
+	trainerbattle_no_intro TRAINER_GRUNT_SEAFLOOR_CAVERN_1, FabledIsland_Interior_LoseText2
+	applymovement 3, Horde_Grunt_3_Retreat
+	applymovement 4, Horde_Grunt_4_Retreat
+	waitmovement 4
+	checkplayergender
+	compare VAR_RESULT, 0
+	goto_if_eq FabledIsland_Interior_EventScript_Horde_6
+	msgbox FabledIsland_Interior_Rival_Brendan_Tired, MSGBOX_DEFAULT
+	closemessage
+FabledIsland_Interior_EventScript_Horde_5:
+	applymovement 5, Horde_Grunt_5_Approach
+	applymovement 6, Horde_Grunt_6_Approach
+	waitmovement 6
+	trainerbattle_no_intro TRAINER_GRUNT_SEAFLOOR_CAVERN_2, FabledIsland_Interior_LoseText3
+	applymovement 5, Horde_Grunt_5_Retreat
+	applymovement 6, Horde_Grunt_6_Retreat
+	waitmovement 6
 	return
 
-FabledIsland_Interior_EventScript_Horde_1:
+FabledIsland_Interior_EventScript_Horde_2:
 	msgbox FabledIsland_Interior_RivalEntry_May, MSGBOX_DEFAULT
 	closemessage
 	applymovement 13, Rival_Walk_To_Center
@@ -70,7 +105,12 @@ FabledIsland_Interior_EventScript_Horde_1:
 	msgbox FabledIsland_Interior_RivalAssure_May, MSGBOX_DEFAULT
 	applymovement 9, Horde_Grunt_Talk_Movement_9
 	msgbox FabledIsland_Interior_ItDoesntMatter, MSGBOX_DEFAULT
-	return
+	goto FabledIsland_Interior_EventScript_Horde_1
+
+FabledIsland_Interior_EventScript_Horde_6:
+	msgbox FabledIsland_Interior_Rival_May_Tired, MSGBOX_DEFAULT
+	closemessage
+	goto FabledIsland_Interior_EventScript_Horde_5
 
 
 Movement_Walk_To_Center:
@@ -87,6 +127,8 @@ Movement_Walk_To_Center:
 	step_end
 
 PlayerFaceUp:
+	delay_16
+	delay_16
 	delay_16
 	delay_16
 	face_up
@@ -367,6 +409,97 @@ Rival_Walk_To_Center:
 	walk_in_place_down
 	step_end
 
+Horde_Grunt_1_Approach:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_in_place_down
+	step_end
+
+Horde_Grunt_1_Retreat:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_right
+	step_end
+
+Horde_Grunt_2_Approach:
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_up
+	step_end
+
+Horde_Grunt_2_Retreat:
+	walk_right
+	walk_right
+	walk_right
+	walk_in_place_left
+	step_end
+
+Horde_Grunt_3_Approach:
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+Horde_Grunt_4_Approach:
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+Horde_Grunt_3_Retreat:
+	walk_up
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+Horde_Grunt_4_Retreat:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	face_up
+	step_end
+
+Horde_Grunt_5_Approach:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
+
+Horde_Grunt_5_Retreat:
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	face_down
+	step_end
+
+Horde_Grunt_6_Approach:
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_right
+	step_end
+
+Horde_Grunt_6_Retreat:
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	face_right
+	step_end
+
 FabledIsland_Interior_StopRightThere::
 	.string "Stop right there punk!$"
 
@@ -387,28 +520,52 @@ FabledIsland_Interior_RivalEntry_May::
 	.string "May: Now you hold it!$"
 
 FabledIsland_Interior_RivalAssure_May::
-	.string "May: When I saw you chasing the Aqua\n"
-	.string "grunt, and seeing a new base, then\l"
-	.string "watching you fly off... I couldn't just\l"
-	.string "sit by and watch.\p"
-	.string "We're rivals right? And if we fight\n"
-	.string "together, then no matter how many\l"
-	.string "there are, we can finish them together!$"
+	.string "May: I saw you chasing after the Aqua\n"
+	.string "grunt, but you flew off before I could\l"
+	.string "reach you. I always seem to be playing\l"
+	.string "catch up...\p"
+	.string "You may be the Champion, but that\n"
+	.string "doesn't mean I'm going to sit back and\l"
+	.string "watch. We're still rivals after all!$"
 
 FabledIsland_Interior_RivalEntry_Brendan::
 	.string "Brendan: Now you hold it!$"
 
 FabledIsland_Interior_RivalAssure_Brendan::
-	.string "Brendan: When I saw you chasing the\n"
-	.string "Aqua grunt, and seeing a new base, then\l"
-	.string "watching you fly off... I couldn't just\l"
-	.string "sit by and watch.\p"
-	.string "We're rivals right? And if we fight\n"
-	.string "together, then no matter how many\l"
-	.string "there are, we can finish them together!$"
+	.string "Brendan: I saw you chasing after the\n"
+	.string "Aqua grunt, but you flew off before I\l"
+	.string "could reach you. I always seem to be\l"
+	.string "playing catch up...\p"
+	.string "You may be the Champion, but that\n"
+	.string "doesn't mean I'm going to sit back and\l"
+	.string "watch. We're still rivals after all!$"
 
 FabledIsland_Interior_ItDoesntMatter::
 	.string "Neo Grunt: Another one won't make a\n"
 	.string "difference, we've got this, now let's\l"
 	.string "stomp them!\p"
 	.string "Grunts: YEAAAAAHHH!!!!$"
+
+FabledIsland_Interior_LoseText1::
+	.string "Tch, I had to go first$"
+
+FabledIsland_Interior_LoseText2::
+	.string "Haha, well your friend there isn't\n"
+	.string "looking too good$"
+
+FabledIsland_Interior_Rival_May_Tired::
+	.string "May: Hey {PLAYER}, I'm sorry, I made a\n"
+	.string "critical mistake in that last fight.\p"
+	.string "I need some time to heal, please hold\n"
+	.string "them off for me.$"
+
+FabledIsland_Interior_Rival_Brendan_Tired::
+	.string "Brendan: Hey {PLAYER}, I'm sorry, I\n"
+	.string "made a critical mistake in that last\l"
+	.string "fight.\p"
+	.string "I need some time to heal, please hold\n"
+	.string "them off for me.$"
+
+FabledIsland_Interior_LoseText3::
+	.string "No way, I think we blew our chance to\n"
+	.string "win$"
