@@ -49,11 +49,11 @@ text FabledIsland_Interior_ItDoesntMatter {
 }
 
 text FabledIsland_Interior_LoseText1 {
-    format("Tch, I had to go first")
+    format("Tch, I had to go first.")
 }
 
 text FabledIsland_Interior_LoseText2 {
-    format("Haha, well your friend there isn't looking too good")
+    format("Haha, well your friend there isn't looking too good.")
 }
 
 text FabledIsland_Interior_Rival_May_Tired {
@@ -65,7 +65,15 @@ text FabledIsland_Interior_Rival_Brendan_Tired {
 }
 
 text FabledIsland_Interior_LoseText3 {
-    format("No way, I think we blew our chance to win")
+    format("No way, I think we blew our chance to win.")
+}
+
+text FabledIsland_Interior_Rival_May_Ready {
+    format("May: Ok I'm ready! Leave this next one to me, I'll give you time to heal.")
+}
+
+text FabledIsland_Interior_Rival_Brendan_Ready {
+    format("Brendan: Ok I'm ready! Leave this next one to me, I'll give you time to heal.")
 }
 
 script FabledIsland_Interior_EventScript_Horde {
@@ -151,6 +159,25 @@ script FabledIsland_Interior_EventScript_Horde {
     applymovement(5, Horde_Grunt_5_Retreat)
     applymovement(6, Horde_Grunt_6_Retreat)
     waitmovement(6)
+    if (var(VAR_RESULT) == 0) { // if rival is may
+        msgbox(FabledIsland_Interior_Rival_May_Ready, MSGBOX_DEFAULT)
+        closemessage
+    } else {
+        msgbox(FabledIsland_Interior_Rival_Brendan_Ready, MSGBOX_DEFAULT)
+        closemessage
+    }
+    applymovement(7, Horde_Grunt_7_Approach)
+    applymovement(8, Horde_Grunt_8_Approach)
+    waitmovement(8)
+    special(Script_OpenBagMenu)
+    waitstate()
+    applymovement(7, Horde_Grunt_7_Approach)
+    applymovement(8, Horde_Grunt_8_Approach)
+    waitmovement(8)
+    applymovement(9, Horde_Grunt_9_Approach)
+    applymovement(10, Horde_Grunt_10_Approach)
+    waitmovement(9)
+    trainerbattle_no_intro(TRAINER_GRUNT_SEAFLOOR_CAVERN_2, FabledIsland_Interior_LoseText3)
 }
 
 movement Movement_Walk_To_Center {
@@ -160,7 +187,7 @@ movement Movement_Walk_To_Center {
 }
 
 movement PlayerFaceUp {
-    delay_16 * 4
+    delay_16 * 12
     face_up
 }
 
@@ -335,3 +362,43 @@ movement Horde_Grunt_6_Retreat {
     walk_left
     face_right 
 }
+
+movement Horde_Grunt_7_Approach {
+    walk_up * 3
+    face_right
+}
+
+movement Horde_Grunt_7_Retreat {
+    walk_down * 3
+    face_up
+}
+
+movement Horde_Grunt_8_Approach {
+    walk_right
+    walk_down * 4
+    face_left
+}
+
+movement Horde_Grunt_8_Retreat {
+    walk_up * 4
+    walk_left
+    face_down
+}
+
+movement Horde_Grunt_9_Approach {
+    walk_down * 2
+    walk_right
+    face_down
+}
+
+movement Horde_Grunt_9_Retreat {
+    walk_left
+    walk_up * 2
+    face_down
+}
+
+movement Horde_Grunt_10_Approach {
+    walk_down * 2
+    face_up
+}
+

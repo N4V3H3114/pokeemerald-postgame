@@ -381,6 +381,7 @@ gSpecials::
 	def_special BufferFavorLadyPlayerName
 	def_special DidFavorLadyLikeItem
 	def_special Script_FavorLadyOpenBagMenu
+	def_special Script_OpenBagMenu
 	def_special Script_DoesFavorLadyLikeItem
 	def_special IsFavorLadyThresholdMet
 	def_special FavorLadyGetPrize

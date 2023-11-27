@@ -75,6 +75,8 @@ FabledIsland_Interior_EventScript_Horde_1:
 	applymovement 1, Horde_Grunt_1_Retreat
 	applymovement 2, Horde_Grunt_2_Retreat
 	waitmovement 1
+	special Script_OpenBagMenu
+	waitstate
 	applymovement 3, Horde_Grunt_3_Approach
 	applymovement 4, Horde_Grunt_4_Approach
 	waitmovement 4
@@ -127,6 +129,14 @@ Movement_Walk_To_Center:
 	step_end
 
 PlayerFaceUp:
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
 	delay_16
 	delay_16
 	delay_16

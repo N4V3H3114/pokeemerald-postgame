@@ -226,6 +226,11 @@ void Script_FavorLadyOpenBagMenu(void)
     FavorLadyOpenBagMenu();
 }
 
+void Script_OpenBagMenu(void)
+{
+    CB2_BagMenuWithReturn();
+}
+
 static bool8 DoesFavorLadyLikeItem(u16 itemId)
 {
     u8 numItems;
