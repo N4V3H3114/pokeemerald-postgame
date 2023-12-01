@@ -248,7 +248,7 @@
       "x": 30,
       "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_FABLED_ISLAND_INTERIOR",
+      "dest_map": "MAP_FABLED_ISLAND_INTERIOR_SUMMIT",
       "dest_warp_id": "0"
     }
   ],

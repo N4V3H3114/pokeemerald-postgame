@@ -4444,7 +4444,7 @@
     {
       "id": "LAYOUT_FABLED_ISLAND_INTERIOR_SUMMIT",
       "name": "FabledIsland_Interior_Summit_Layout",
-      "width": 20,
+      "width": 21,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_FabledTileset",

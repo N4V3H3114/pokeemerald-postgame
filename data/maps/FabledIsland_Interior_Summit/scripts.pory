@@ -1,0 +1,82 @@
+raw `
+FabledIsland_Interior_Summit_MapScripts::
+	.byte 0
+`
+
+text FabledIsland_Summit_Maxie_Finally {
+    format("Maxie: So, you've finally come.\pHehehe, you're too late. Archie and I have already captured the POKéMON from the meteor")
+}
+
+text FabledIsland_Summit_Archie_Jirachi {
+    format("Archie: Fufufu, we caught JIRACHI, and used its power to wish for a POKéMON to defeat you!\pIt granted us this DEOXYS, and with it we will defeat you easily!")
+}
+
+text FabledIsland_Summit_Maxie_Wait {
+    format("Maxie: Wait, though it would be easy to defeat {PLAYER} here, with their tired POKéMON, it wouldn't be ideal.\pWe should let {PLAYER} heal and fight us in our base, the height of our power verses theirs for dominance of Hoenn.")
+}
+
+text FabledIsland_Summit_Archie_Good_Idea {
+    format("Archie: Heh, not a bad idea. That would give us time to understand DEOXYS and JIRACHI's power better too.")
+}
+
+text FabledIsland_Summit_Archie_Alright {
+    format("Alright then {PLAYER}, hurry to our base near MT. PYRE, we'll be waiting for your challenge!\pTeam Neo, move out!")
+}
+
+
+script FabledIsland_Summit_EventScript {
+    applymovement(OBJ_EVENT_ID_PLAYER, FabledIsland_Summit_Walk_Up)
+    waitmovement(0)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, FabledIsland_Summit_Pan_Up)
+    waitmovement(0)
+    special(RemoveCameraObject)
+    applymovement(1, FabledIsland_Summit_Walk_In_Place_Down)
+    msgbox(FabledIsland_Summit_Maxie_Finally, MSGBOX_DEFAULT)
+    closemessage
+    applymovement(2, FabledIsland_Summit_Walk_In_Place_Down)
+    msgbox(FabledIsland_Summit_Archie_Jirachi, MSGBOX_DEFAULT)
+    closemessage
+    applymovement(1, FabledIsland_Summit_Face_Left)
+    waitmovement(1)
+    msgbox(FabledIsland_Summit_Maxie_Wait, MSGBOX_DEFAULT)
+    applymovement(2, FabledIsland_Summit_Face_Right)
+    waitmovement(2)
+    msgbox(FabledIsland_Summit_Archie_Good_Idea, MSGBOX_DEFAULT)
+    applymovement(1, FabledIsland_Summit_Walk_In_Place_Down)
+    applymovement(2, FabledIsland_Summit_Walk_In_Place_Down)
+    msgbox(FabledIsland_Summit_Archie_Alright, MSGBOX_DEFAULT)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    removeobject(2)
+    removeobject(3)
+    removeobject(4)
+    removeobject(5)
+    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_GIFT_UNUSED_1, 2)
+    setflag(FLAG_FABLED_ISLAND_FINISH)
+}
+
+movement FabledIsland_Summit_Walk_In_Place_Down {
+    walk_in_place_down
+}
+
+movement FabledIsland_Summit_Face_Right {
+    face_right
+}
+
+movement FabledIsland_Summit_Face_Left {
+    face_left
+}
+
+movement FabledIsland_Summit_Walk_Up {
+    walk_up * 2
+}
+
+movement FabledIsland_Summit_Pan_Up {
+    walk_slow_up * 2
+}
+
+movement FabledIsland_Summit_Pan_Down {
+    walk_slow_down * 2
+}

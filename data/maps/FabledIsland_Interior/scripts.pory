@@ -252,6 +252,8 @@ script FabledIsland_Interior_EventScript_Horde {
         msgbox(FabledIsland_Interior_Rival_Brendan_You_Go_Ahead, MSGBOX_DEFAULT)
         closemessage
     }
+    setvar(VAR_GIFT_UNUSED_1, 1)
+    setflag(FLAG_FABLED_ISLAND_HORDE_BEATEN)
     releaseall
 }
 
