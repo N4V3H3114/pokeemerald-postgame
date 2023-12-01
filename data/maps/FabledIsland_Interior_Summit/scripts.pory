@@ -53,6 +53,10 @@ script FabledIsland_Summit_EventScript {
     removeobject(4)
     removeobject(5)
     fadescreen(FADE_FROM_BLACK)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, FabledIsland_Summit_Pan_Down)
+    waitmovement(0)
+    special(RemoveCameraObject)
     setvar(VAR_GIFT_UNUSED_1, 2)
     setflag(FLAG_FABLED_ISLAND_FINISH)
 }
