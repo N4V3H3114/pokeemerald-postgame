@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/FabledIsland_Interior/border.bin",
       "blockdata_filepath": "data/layouts/FabledIsland_Interior/map.bin"
+    },
+    {
+      "id": "LAYOUT_FABLED_ISLAND_INTERIOR_SUMMIT",
+      "name": "FabledIsland_Interior_Summit_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_FabledTileset",
+      "border_filepath": "data/layouts/FabledIsland_Interior_Summit/border.bin",
+      "blockdata_filepath": "data/layouts/FabledIsland_Interior_Summit/map.bin"
     }
   ]
 }

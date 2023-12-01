@@ -1061,3 +1061,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/FabledIsland/scripts.inc"
 
 	.include "data/maps/FabledIsland_Interior/scripts.inc"
+
+	.include "data/maps/FabledIsland_Interior_Summit/scripts.inc"

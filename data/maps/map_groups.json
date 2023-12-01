@@ -95,7 +95,8 @@
     "Underwater_Route125",
     "Route135",
     "FabledIsland",
-    "FabledIsland_Interior"
+    "FabledIsland_Interior",
+    "FabledIsland_Interior_Summit"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
