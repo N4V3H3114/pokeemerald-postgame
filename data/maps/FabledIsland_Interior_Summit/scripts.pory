@@ -12,7 +12,7 @@ text FabledIsland_Summit_Archie_Jirachi {
 }
 
 text FabledIsland_Summit_Maxie_Wait {
-    format("Maxie: Wait, though it would be easy to defeat {PLAYER} here, with their tired POKéMON, it wouldn't be ideal.\pWe should let {PLAYER} heal and fight us in our base, the height of our power verses theirs for dominance of Hoenn.")
+    format("Maxie: Wait, though it would be easy to defeat {PLAYER} here, with their tired POKéMON, it wouldn't be ideal.\pWe should let {PLAYER} heal and fight us in our base, the height of our power verses theirs, for dominance of Hoenn.")
 }
 
 text FabledIsland_Summit_Archie_Good_Idea {
@@ -47,6 +47,7 @@ script FabledIsland_Summit_EventScript {
     applymovement(2, FabledIsland_Summit_Walk_In_Place_Down)
     msgbox(FabledIsland_Summit_Archie_Alright, MSGBOX_DEFAULT)
     fadescreen(FADE_TO_BLACK)
+    closemessage
     removeobject(1)
     removeobject(2)
     removeobject(3)

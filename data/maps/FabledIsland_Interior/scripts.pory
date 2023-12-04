@@ -199,6 +199,7 @@ script FabledIsland_Interior_EventScript_Horde {
     applymovement(5, Horde_Grunt_5_Retreat)
     applymovement(6, Horde_Grunt_6_Retreat)
     waitmovement(6)
+    checkplayergender //0 is male, 1 is female
     if (var(VAR_RESULT) == 0) { // if rival is may
         msgbox(FabledIsland_Interior_Rival_May_Ready, MSGBOX_DEFAULT)
         closemessage
@@ -211,13 +212,14 @@ script FabledIsland_Interior_EventScript_Horde {
     waitmovement(8)
     special(Script_OpenBagMenu)
     waitstate()
-    applymovement(7, Horde_Grunt_7_Approach)
-    applymovement(8, Horde_Grunt_8_Approach)
+    applymovement(7, Horde_Grunt_7_Retreat)
+    applymovement(8, Horde_Grunt_8_Retreat)
     waitmovement(8)
     applymovement(9, Horde_Grunt_9_Approach)
     applymovement(10, Horde_Grunt_10_Approach)
     waitmovement(9)
     trainerbattle_no_intro(TRAINER_GRUNT_MAGMA_HIDEOUT_11, FabledIsland_Interior_LoseText4)
+    //this retreat for both didn't work right
     applymovement(9, Horde_Grunt_9_Retreat)
     applymovement(10, Horde_Grunt_10_Retreat)
     waitmovement(9)
@@ -241,10 +243,9 @@ script FabledIsland_Interior_EventScript_Horde {
     addobject(15)
     addobject(16)
     addobject(17)
-    applymovement(15, Horde_Grunts_Enter)
-    applymovement(16, Horde_Grunts_Enter)
-    applymovement(17, Horde_Grunts_Enter)
+    applymovement(15, Horde_Grunt_15_Enter)
     waitmovement(15)
+    checkplayergender //0 is male, 1 is female
     if (var(VAR_RESULT) == 0) { // if rival is may
         msgbox(FabledIsland_Interior_Rival_May_You_Go_Ahead, MSGBOX_DEFAULT)
         closemessage
@@ -475,13 +476,12 @@ movement Horde_Grunt_9_Retreat {
 }
 
 movement Horde_Grunt_10_Approach {
-    walk_down * 2
-    face_up
+    walk_up* 2
 }
 
 movement Horde_Grunt_10_Retreat {
-    walk_up * 2
-    face_down
+    walk_down * 2
+    face_up
 }
 
 movement Horde_Grunt_11_Approach {
@@ -495,12 +495,13 @@ movement Horde_Grunt_11_Retreat {
 }
 
 movement Horde_Grunt_12_Approach {
-    walk_left * 3
-    face_up
+    walk_left * 2
+    walk_up
 }
 
 movement Horde_Grunt_12_Retreat {
-    walk_right * 3
+    walk_down
+    walk_right * 2
     face_left
 }
 
@@ -509,7 +510,7 @@ movement Horde_Grunt_9_Walk_In_Place {
 }
 
 movement Horde_Grunt_14_Approach {
-    walk_down * 4
+    walk_down * 5
 }
 
 movement Horde_Grunt_8_Make_Room {
@@ -526,7 +527,8 @@ movement Horde_Grunt_14_Retreat {
     face_down
 }
 
-movement Horde_Grunts_Enter {
-    walk_up
+movement Horde_Grunt_15_Enter {
+    walk_up * 5
+    walk_right
 }
 

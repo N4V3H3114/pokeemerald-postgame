@@ -8722,7 +8722,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_MagmaHorde4),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_MagmaHorde4),
     },
 
     [TRAINER_GRUNT_MAGMA_HIDEOUT_12] =

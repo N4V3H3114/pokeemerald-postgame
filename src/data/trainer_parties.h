@@ -12829,7 +12829,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde2[] = {
     {
         .iv = 150,
         .lvl = 82,
-        .species = SPECIES_KABUTOPS
+        .species = SPECIES_AERODACTYL
     },
 };
 
@@ -12847,7 +12847,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde3[] = {
     {
         .iv = 150,
         .lvl = 83,
-        .species = SPECIES_WOBBUFFET
+        .species = SPECIES_AGGRON
     },
     {
         .iv = 150,
@@ -12866,7 +12866,57 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde3[] = {
     },
 };
 
-/*static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde4[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_MagmaHorde4[] = { //Self Destruct guy
+    {
+        .iv = 150,
+        .lvl = 81,
+        .species = SPECIES_ELECTRODE,
+        .moves = {MOVE_EXPLOSION, MOVE_THUNDERBOLT, MOVE_NONE, MOVE_NONE}
+    },
+    {
+        .iv = 150,
+        .lvl = 81,
+        .species = SPECIES_KABUTOPS,
+        .moves = {MOVE_EXPLOSION, MOVE_WATER_PULSE, MOVE_ROCK_SLIDE, MOVE_NONE}
+    },
+    {
+        .iv = 150,
+        .lvl = 81,
+        .species = SPECIES_FORRETRESS,
+        .moves = {MOVE_EXPLOSION, MOVE_METAL_CLAW, MOVE_NONE, MOVE_NONE}
+    },
+    {
+        .iv = 150,
+        .lvl = 81,
+        .species = SPECIES_SHIFTRY,
+        .moves = {MOVE_EXPLOSION, MOVE_RAZOR_LEAF, MOVE_NONE, MOVE_NONE}
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde5[] = {
+    {
+        .iv = 255,
+        .lvl = 85,
+        .species = SPECIES_MASQUERAIN
+    },
+    {
+        .iv = 150,
+        .lvl = 83,
+        .species = SPECIES_DODRIO
+    },
+    {
+        .iv = 150,
+        .lvl = 83,
+        .species = SPECIES_GYARADOS
+    },
+    {
+        .iv = 150,
+        .lvl = 83,
+        .species = SPECIES_MAGNETON
+    }
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde6[] = {
     {
         .iv = 150,
         .lvl = 83,
@@ -12897,80 +12947,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde3[] = {
         .lvl = 83,
         .species = SPECIES_VENOMOTH
     }
-};*/
-
-static const struct TrainerMonNoItemCustomMoves sParty_MagmaHorde4[] = { //Self Destruct guy
-    {
-        .iv = 150,
-        .lvl = 81,
-        .species = SPECIES_ELECTRODE,
-        .moves = {MOVE_EXPLOSION, MOVE_THUNDERBOLT, MOVE_NONE, MOVE_NONE}
-    },
-    {
-        .iv = 150,
-        .lvl = 81,
-        .species = SPECIES_KABUTOPS,
-        .moves = {MOVE_EXPLOSION, MOVE_WATER_PULSE, MOVE_ROCK_SLIDE, MOVE_NONE}
-    },
-    {
-        .iv = 150,
-        .lvl = 81,
-        .species = SPECIES_FORRETRESS,
-        .moves = {MOVE_EXPLOSION, MOVE_METAL_CLAW, MOVE_NONE, MOVE_NONE}
-    },
-    {
-        .iv = 150,
-        .lvl = 81,
-        .species = SPECIES_SHIFTRY,
-        .moves = {MOVE_EXPLOSION, MOVE_RAZOR_LEAF, MOVE_RAZOR_WIND, MOVE_NONE}
-    },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_AquaHorde5[] = {
-    {
-        .iv = 255,
-        .lvl = 85,
-        .species = SPECIES_MASQUERAIN
-    },
-    {
-        .iv = 150,
-        .lvl = 83,
-        .species = SPECIES_DODRIO
-    },
-    {
-        .iv = 150,
-        .lvl = 83,
-        .species = SPECIES_GYARADOS
-    },
-    {
-        .iv = 150,
-        .lvl = 83,
-        .species = SPECIES_MAGNETON
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde6[] = {
-    {
-        .iv = 255,
-        .lvl = 85,
-        .species = SPECIES_MASQUERAIN
-    },
-    {
-        .iv = 150,
-        .lvl = 83,
-        .species = SPECIES_DODRIO
-    },
-    {
-        .iv = 150,
-        .lvl = 83,
-        .species = SPECIES_GYARADOS
-    },
-    {
-        .iv = 150,
-        .lvl = 83,
-        .species = SPECIES_MAGNETON
-    }
-};
 
 
 
