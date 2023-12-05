@@ -3164,7 +3164,7 @@
     {
       "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP2",
       "name": "AquaHideout_UnusedRubyMap2_Layout",
-      "width": 62,
+      "width": 40,
       "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",
