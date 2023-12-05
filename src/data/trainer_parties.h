@@ -12949,13 +12949,92 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MagmaHorde6[] = {
     }
 };
 
+static const struct TrainerMonItemCustomMoves sParty_MaxieArchie_Phase1[] = {
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_HOUNDOOM,
+        .heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_CRUNCH, MOVE_ERUPTION, MOVE_HYPER_FANG, MOVE_POISON_FANG} 
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_WALREIN,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_YAWN, MOVE_RAIN_DANCE}
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_JIRACHI,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_CRUNCH, MOVE_ERUPTION, MOVE_HYPER_FANG, MOVE_POISON_FANG}
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_LUNATONE,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_RAIN_DANCE, MOVE_PSYCHIC, MOVE_ROCK_SLIDE, MOVE_EXPLOSION}
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_CAMERUPT,
+        .heldItem = ITEM_SOFT_SAND,
+        .moves = {MOVE_HEAT_WAVE, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_SLACK_OFF}
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_ALTARIA,
+        .heldItem = ITEM_NEVER_MELT_ICE,
+        .moves = {MOVE_ICE_BEAM, MOVE_THUNDER, MOVE_RAIN_DANCE, MOVE_SKY_ATTACK}
+    },
+};
 
-
-
-
-
-
-
-
-
-
+static const struct TrainerMonItemCustomMoves sParty_MaxieArchie_Phase2[] = {
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_NINETALES,
+        .heldItem = ITEM_SALAC_BERRY,
+        .moves = {MOVE_TAIL_GLOW, MOVE_SOLAR_BEAM, MOVE_HEAT_WAVE, MOVE_PSYCHIC} 
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_MANTINE,
+        .heldItem = ITEM_PETAYA_BERRY,
+        .moves = {MOVE_SURF, MOVE_ICY_WIND, MOVE_RECOVER, MOVE_TWISTER}
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_SOLROCK,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_SUNNY_DAY, MOVE_HEAT_WAVE, MOVE_ROCK_SLIDE, MOVE_EXPLOSION}
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_SHARPEDO,
+        .heldItem = ITEM_SALAC_BERRY,
+        .moves = {MOVE_SUPER_FANG, MOVE_CRUNCH, MOVE_POISON_FANG, MOVE_THUNDER_PUNCH}
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_DEOXYS,
+        .heldItem = ITEM_TWISTED_SPOON,
+        .moves = {MOVE_PSYCHO_BOOST, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_SOLAR_BEAM}
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_TYPHLOSION,
+        .heldItem = ITEM_PETAYA_BERRY,
+        .moves = {MOVE_ERUPTION, MOVE_SOLAR_BEAM, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY}
+    },
+};

@@ -1,8 +1,14 @@
-raw `AquaHideout_UnusedRubyMap2_MapScripts::
-	.byte 0`
+mapscripts FabledIsland_Interior_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SetupRivalGfxId
+}
+
+script SetupRivalGfxId {
+    removeobject(3)
+    call(Common_EventScript_SetupRivalGfxId)
+}
 
 text Text_NeoHideout_Map2_Archie_Youve_Come {
-    format("Archie: Fufufu, you've finally made it. I had no doubts that you would.\pWas it your passion to save Hoenn?\nWas it your drive for battle?\nOr perhaps something like a love forPOKéMON?")
+    format("Archie: Fufufu, you've finally made it. I had no doubts that you would.\pWas it your passion to save Hoenn?\nWas it your drive for battle?\nOr perhaps something like a love for POKéMON?")
 }
 
 text Text_NeoHideout_Map2_Maxie_Doesnt_Matter {
@@ -11,6 +17,42 @@ text Text_NeoHideout_Map2_Maxie_Doesnt_Matter {
 
 text Text_NeoHideout_Map2_Archie_Then_We_Fight {
     format("Archie: Grahaha, and then we can go back to fighting eachother! I'll be looking forward to it.\pBut first, {PLAYER}, it's time to take you down! We're teaming up for one final battle!")
+}
+
+text Text_NeoHideout_Map2_Archie_Lose {
+    format("Haha, alright Maxie you take the lead for the finish!")
+}
+
+text Text_NeoHideout_Map2_Maxie_Not_Bad {
+    format("Not bad, but your strength won't be enough.")
+}
+
+text Text_NeoHideout_Map2_Maxie_Lose {
+    format("...")
+}
+
+text Text_NeoHideout_Map2_Maxie_Post_Battle {
+    format("Maxie: Impossible... how could we have been beaten? Even with our legendary POKéMON...")
+}
+
+text Text_NeoHideout_Map2_May_Intro { 
+    format("May: Don't worry {PLAYER}, I brought backup!\pWait, you beat them already?")
+}
+
+text Text_NeoHideout_Map2_Wallace_Seems_So {
+    format("Wallace: It seems so. I must say, you've gotten even stronger since we fought for your Champion title. You certainly carry it well.\pAlright, I'll take care of handing these two over to the authorities, will you come quietly?")
+}
+
+text Text_NeoHideout_Map2_Archie_Yes {
+    format("Archie: Yes, we'll let our teams disband and atone for our crimes. Even JIRACHI's wish granting power couldn't give us what we needed to defeat {PLAYER}.\pBut Maxie, when we get out, let's battle again.")
+}
+
+text Text_NeoHideout_Map2_Maxie_Yes {
+    format("Maxie: Haha, yes Archie, I'll be happy to face you again.")
+}
+
+text Text_NeoHideout_Map2_May_Take_Jirachi {
+    format("May: Sorry I didn't make it here sooner, I thought getting help would be the best course of action.\pBut for now, I'll make sure JIRACHI gets back to Fabled Island alright. Maybe I'll spend some time training there too.")
 }
 
 script EventScript_NeoHideout_Map2_Walk_Down {
@@ -35,6 +77,11 @@ script EventScript_NeoHideout_Map2_Final_Battle {
     applymovement(1, Movement_Walk_In_Place_Left)
     msgbox(Text_NeoHideout_Map2_Archie_Then_We_Fight, MSGBOX_DEFAULT)
     closemessage
+    trainerbattle_no_intro(TRAINER_ARCHIE, Text_NeoHideout_Map2_Archie_Lose)
+    applymovement(2, Movement_Walk_In_Place_Left)
+    msgbox(Text_NeoHideout_Map2_Maxie_Not_Bad, MSGBOX_DEFAULT)
+    closemessage
+    trainerbattle_no_intro(TRAINER_MAXIE, Text_NeoHideout_Map2_Maxie_Lose)
 }
 
 movement Movement_Player_Walk_Down {
