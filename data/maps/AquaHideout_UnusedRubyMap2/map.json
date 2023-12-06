@@ -56,6 +56,96 @@
       "x": 20,
       "y": 9,
       "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Down"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_To_Center"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Up"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Up"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Up"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Up"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_GIFT_UNUSED_1",
+      "var_value": "2",
+      "script": "EventScript_NeoHideout_Map2_Walk_Up"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 13,
+      "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "NULL"

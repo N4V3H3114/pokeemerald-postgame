@@ -39,6 +39,10 @@ text Text_NeoHideout_Map2_May_Intro {
     format("May: Don't worry {PLAYER}, I brought backup!\pWait, you beat them already?")
 }
 
+text Text_NeoHideout_Map2_Brendan_Intro { 
+    format("Brendan: Don't worry {PLAYER}, I brought backup!\pWait, you beat them already?")
+}
+
 text Text_NeoHideout_Map2_Wallace_Seems_So {
     format("Wallace: It seems so. I must say, you've gotten even stronger since we fought for your Champion title. You certainly carry it well.\pAlright, I'll take care of handing these two over to the authorities, will you come quietly?")
 }
@@ -55,6 +59,10 @@ text Text_NeoHideout_Map2_May_Take_Jirachi {
     format("May: Sorry I didn't make it here sooner, I thought getting help would be the best course of action.\pBut for now, I'll make sure JIRACHI gets back to Fabled Island alright. Maybe I'll spend some time training there too.")
 }
 
+text Text_NeoHideout_Map2_Brendan_Take_Jirachi {
+    format("Brendan: Sorry I didn't make it here sooner, I thought getting help would be the best course of action.\pBut for now, I'll make sure JIRACHI gets back to Fabled Island alright. Maybe I'll spend some time training there too.")
+}
+
 script EventScript_NeoHideout_Map2_Walk_Down {
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_Down) 
 }
@@ -66,7 +74,7 @@ script EventScript_NeoHideout_Map2_Walk_Up {
 script EventScript_NeoHideout_Map2_Walk_To_Center {
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_Player_Walk_Center)
 }
-
+//1 is archie, 2 maxie, 3 is may, 4 is wallace
 script EventScript_NeoHideout_Map2_Final_Battle {
     applymovement(1, Movement_Walk_In_Place_Left)
     msgbox(Text_NeoHideout_Map2_Archie_Youve_Come, MSGBOX_DEFAULT)
@@ -82,6 +90,20 @@ script EventScript_NeoHideout_Map2_Final_Battle {
     msgbox(Text_NeoHideout_Map2_Maxie_Not_Bad, MSGBOX_DEFAULT)
     closemessage
     trainerbattle_no_intro(TRAINER_MAXIE, Text_NeoHideout_Map2_Maxie_Lose)
+    msgbox(Text_NeoHideout_Map2_Maxie_Post_Battle, MSGBOX_DEFAULT)
+    closemessage
+    addobject(3)
+    addobject(4)
+    applymovement(3, Movement_Backup_Approach)
+    applymovement(4, Movement_Backup_Approach)
+    checkplayergender //0 is male, 1 is female
+    if (var(VAR_RESULT) == 0) { // if rival is may
+        msgbox(Text_NeoHideout_Map2_May_Intro, MSGBOX_DEFAULT)
+        closemessage
+    } else {
+        msgbox(Text_NeoHideout_Map2_Brendan_Intro, MSGBOX_DEFAULT)
+        closemessage
+    }
 }
 
 movement Movement_Player_Walk_Down {
@@ -98,4 +120,8 @@ movement Movement_Player_Walk_Center {
 
 movement Movement_Walk_In_Place_Left {
     walk_in_place_left * 2
+}
+
+movement Movement_Backup_Approach {
+    walk_fast_right * 9
 }
