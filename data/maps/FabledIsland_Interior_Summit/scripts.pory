@@ -1,7 +1,14 @@
-raw `
-FabledIsland_Interior_Summit_MapScripts::
-	.byte 0
-`
+mapscripts FabledIsland_Interior_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SetupRivalGfxId
+}
+
+script SetupRivalGfxId {
+    if(flag(FLAG_NEO_EVENT_DONE) && !flag(FLAG_FINAL_RIVAL_BATTLE)) {
+    removeobject(7)
+    call(Common_EventScript_SetupRivalGfxId)
+    addobject(7)
+    }
+}
 
 text FabledIsland_Summit_Maxie_Finally {
     format("Maxie: So, you've finally come.\pHehehe, you're too late. Archie and I have already captured the POKéMON from the meteor")
@@ -21,6 +28,38 @@ text FabledIsland_Summit_Archie_Good_Idea {
 
 text FabledIsland_Summit_Archie_Alright {
     format("Alright then {PLAYER}, hurry to our base near MT. PYRE, we'll be waiting for your challenge!\pTeam Neo, move out!")
+}
+
+text FabledIsland_Summit_May_Hello {
+    format("May: Aaahh, the air up here is so nice! What do you think, {PLAYER}?\pI've been training hard, and I think I'm finally ready to challenge you. What do you say, are you ready to face me?")
+}
+
+text FabledIsland_Summit_May_Yes {
+    format("May: Alright... this is it, I won't lose anymore!")
+}
+
+text FabledIsland_Summit_May_No {
+    format("May: Haha, no worries, you don't have to prove anything to me.")
+}
+
+text FabledIsland_Summit_May_Defeated {
+    format("May: I can't believe it... you're like an insurmountable wall that no one can overcome.\pBut you know what, that's okay. You've helped push me to levels farther than I could have imagined.\pI guess that's how you got so strong too, right? I watched your battle with your friends to become the Champion in the Orre region. Your battles were incredible.\p...\pWhat do you think you'll do next? Complete your POKéDEX? Challenge the Battle Frontier? Or maybe you're planning to go abroad?\p No matter what you do, I'll be rooting for you!")
+}
+
+text FabledIsland_Summit_Brendan_Hello {
+    format("Brendan: The air up here is really clear, what do you think, {PLAYER}?\pI've been training hard, and I'm ready to challenge you. What do you say, are you ready to face me?")
+}
+
+text FabledIsland_Summit_Brendan_Yes {
+    format("Brendan: This is it, I won't lose to anyone!")
+}
+
+text FabledIsland_Summit_Brendan_No {
+    format("Brendan: Haha, I'd be scared of my strength too.")
+}
+
+text FabledIsland_Summit_Brendan_Defeated {
+    format("Brendan: I can't believe it... you're like an insurmountable wall that no one can overcome.\pBut you know what, that's okay. You've pushed me to levels farther than I could have imagined.\pI guess that's how you got so strong too, right? I watched your battle with your friends to become the Champion in the Orre region. Your battles were incredible.\p...\pWhat do you think you'll do next? Complete your POKéDEX? Challenge the Battle Frontier? Or maybe you're planning to go abroad?\p No matter what you do, I'll be ready for your next challenge!")
 }
 
 
@@ -61,6 +100,42 @@ script FabledIsland_Summit_EventScript {
     special(RemoveCameraObject)
     setvar(VAR_GIFT_UNUSED_1, 2)
     setflag(FLAG_FABLED_ISLAND_FINISH)
+}
+
+script FabledIsland_Summit_Rival_Battle {
+    checkplayergender //0 is male, 1 is female
+    if (var(VAR_RESULT) == 0) { // if rival is may
+        msgbox(FabledIsland_Summit_May_Hello, MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+            msgbox(FabledIsland_Summit_May_Yes, MSGBOX_NPC)
+            //trainer battle here
+            msgbox(FabledIsland_Summit_May_Defeated)
+            setflag(FLAG_FINAL_RIVAL_BATTLE)
+        }
+		else {
+			msgbox(FabledIsland_Summit_May_No, MSGBOX_NPC)
+		}
+    } else { //brendan rival
+        msgbox(FabledIsland_Summit_Brendan_Hello, MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+            msgbox(FabledIsland_Summit_Brendan_Yes, MSGBOX_NPC)
+            //trainer battle here
+            msgbox(FabledIsland_Summit_Brendan_Defeated)
+            setflag(FLAG_FINAL_RIVAL_BATTLE)
+        }
+		else {
+			msgbox(FabledIsland_Summit_Brendan_No, MSGBOX_NPC)
+		}
+    }
+
+    applymovement(VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown)
+	waitmovement(0)
+	delay(50)
+	setfieldeffectargument(0, 1)
+	dofieldeffect(FLDEFF_NPCFLY_OUT)
+	delay(15)
+	removeobject(VAR_LAST_TALKED)
+	waitfieldeffect(FLDEFF_NPCFLY_OUT)
 }
 
 movement FabledIsland_Summit_Walk_In_Place_Down {
