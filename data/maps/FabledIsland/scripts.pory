@@ -185,7 +185,9 @@ script FabledIsland_EventScript_AdminTrevor {
 	end
 }
 
-
+script FabledIsland_FindItem_StarfBerry {
+	finditem(ITEM_STARF_BERRY)
+}
 
 
 

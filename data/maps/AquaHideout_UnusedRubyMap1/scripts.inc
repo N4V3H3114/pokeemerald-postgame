@@ -27,11 +27,13 @@ NeoHideout_Map1_EventScript_Magma_NeoDoubleBattle1::
 
 NeoHideout_Map1_Aqua_Guard_Location::
 	msgbox NeoHideout_Map1_Aqua_Guard_Location_Text, MSGBOX_NPC
+	setflag FLAG_FABLED_ISLAND_START
 	return
 
 
 NeoHideout_Map1_Aqua_Guard_Motive::
 	msgbox NeoHideout_Map1_Aqua_Guard_Motive_Text, MSGBOX_NPC
+	setflag FLAG_FABLED_ISLAND_START
 	return
 
 

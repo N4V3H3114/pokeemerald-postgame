@@ -11590,6 +11590,258 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_FABLED_ISLAND",
+          "base_label": "gFabledIsland0",
+          "land_mons": {
+            "encounter_rate": 15,
+            "mons": [
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_ARMALDO"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_CRADILY"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_CHARMELEON"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_WARTORTLE"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_IVYSAUR"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_TROPIUS"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_ZANGOOSE"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_SHEDINJA"
+              },
+              {
+                "min_level": 68,
+                "max_level": 72,
+                "species": "SPECIES_METANG"
+              },
+              {
+                "min_level": 75,
+                "max_level": 75,
+                "species": "SPECIES_SALAMENCE"
+              },
+              {
+                "min_level": 75,
+                "max_level": 75,
+                "species": "SPECIES_SALAMENCE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 60,
+                "max_level": 65,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 87,
+                "max_level": 90,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_FABLED_ISLAND",
+          "base_label": "gFabledIsland1",
+          "fishing_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 60,
+                "max_level": 70,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 60,
+                "max_level": 70,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 60,
+                "max_level": 70,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 70,
+                "max_level": 75,
+                "species": "SPECIES_MILOTIC"
+              },
+              {
+                "min_level": 70,
+                "max_level": 75,
+                "species": "SPECIES_MILOTIC"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_FABLED_ISLAND_INTERIOR",
+          "base_label": "gFabledIsland_Interior0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 70,
+                "max_level": 75,
+                "species": "SPECIES_HITMONTOP"
+              },
+              {
+                "min_level": 70,
+                "max_level": 75,
+                "species": "SPECIES_PILOSWINE"
+              },
+              {
+                "min_level": 70,
+                "max_level": 75,
+                "species": "SPECIES_PUPITAR"
+              },
+              {
+                "min_level": 70,
+                "max_level": 75,
+                "species": "SPECIES_PUPITAR"
+              },
+              {
+                "min_level": 70,
+                "max_level": 75,
+                "species": "SPECIES_STANTLER"
+              },
+              {
+                "min_level": 70,
+                "max_level": 75,
+                "species": "SPECIES_AGGRON"
+              },
+              {
+                "min_level": 72,
+                "max_level": 75,
+                "species": "SPECIES_METAGROSS"
+              },
+              {
+                "min_level": 80,
+                "max_level": 80,
+                "species": "SPECIES_REGICE"
+              },
+              {
+                "min_level": 80,
+                "max_level": 80,
+                "species": "SPECIES_REGIROCK"
+              },
+              {
+                "min_level": 80,
+                "max_level": 80,
+                "species": "SPECIES_REGISTEEL"
+              },
+              {
+                "min_level": 80,
+                "max_level": 80,
+                "species": "SPECIES_REGIROCK"
+              },
+              {
+                "min_level": 80,
+                "max_level": 80,
+                "species": "SPECIES_REGISTEEL"
+              }
+            ]
+          }
         }
       ]
     },

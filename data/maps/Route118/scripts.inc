@@ -16,6 +16,7 @@ Route118_OnTransition:
 Route118_OnLoad:
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_118_EAST, AbnormalWeather_EventScript_PlaceTilesRoute118East
 	call_if_eq VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_ROUTE_118_WEST, AbnormalWeather_EventScript_PlaceTilesRoute118West
+	call_if_set FLAG_NEO_AQUA_LILYCOVE_MET, Script_Open_Route_135
 	end
 
 Route118_OnFrame:
@@ -30,6 +31,14 @@ Route118_EventScript_GoodRodFisherman::
 	goto_if_eq VAR_RESULT, YES, Route118_EventScript_ReceiveGoodRod
 	goto_if_eq VAR_RESULT, NO, Route118_EventScript_DeclineGoodRod
 	end
+
+Script_Open_Route_135::
+	setmetatile 22, 18, METATILE_General_CalmWater, FALSE
+	setmetatile 23, 18, METATILE_General_CalmWater, FALSE
+	setmetatile 22, 19, METATILE_General_CalmWater, FALSE
+	setmetatile 23, 19, METATILE_General_CalmWater, FALSE
+	end
+	
 
 Route118_EventScript_ReceiveGoodRod::
 	msgbox Route118_Text_IdenticalMindsTakeThis, MSGBOX_DEFAULT

@@ -798,8 +798,8 @@ LilycoveCity_EventScript_NeoAquaBattle::
 LilycoveCity_EventScript_PostAquaBattle::
 	lockall
 	msgbox LilycoveCity_Text_NeoTeamAquaGrunt1PostBattle, MSGBOX_DEFAULT
+	closemessage
 	specialvar VAR_RESULT, GetPlayerFacingDirection
-	goto_if_eq VAR_RESULT, DIR_EAST, NeoAqua_ExitEast
 	compare VAR_RESULT, DIR_EAST
 	goto_if_eq LilycoveCity_EventScript_PostAquaBattle_2
 	applymovement 23, NeoAqua_ExitLeft
@@ -816,8 +816,7 @@ LilycoveCity_EventScript_PostAquaBattle_2:
 
 
 NeoAqua_ExitEast:
-	face_down
-	walk_fast_down
+	walk_fast_up
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left

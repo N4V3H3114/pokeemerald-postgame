@@ -181,7 +181,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "FabledIsland_EventScript_NeoAquaBattle1",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
@@ -194,7 +194,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "FabledIsland_EventScript_NeoMagmaBattle1",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -207,7 +207,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "FabledIsland_EventScript_NeoAquaBattle2",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
@@ -233,7 +233,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "FabledIsland_EventScript_NeoMagmaBattle2",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -246,7 +246,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "FabledIsland_EventScript_NeoAquaBattle3",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
@@ -259,7 +259,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "FabledIsland_EventScript_NeoMagmaBattle3",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
@@ -272,7 +272,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "FabledIsland_EventScript_NeoMagmaBattle4",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -285,7 +285,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "FabledIsland_EventScript_NeoAquaBattle4",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
@@ -298,7 +298,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "FabledIsland_EventScript_NeoMagmaBattle5",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
@@ -311,7 +311,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "FabledIsland_EventScript_NeoAquaBattle5",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -324,7 +324,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FabledIsland_EventScript_AdminGarrett",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
@@ -337,7 +337,20 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "FabledIsland_EventScript_AdminTrevor",
-      "flag": "0"
+      "flag": "FLAG_NEO_EVENT_DONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 7,
+      "y": 64,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FabledIsland_FindItem_StarfBerry",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_STARF1"
     }
   ],
   "warp_events": [
@@ -388,6 +401,85 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "item": "ITEM_STARF_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_STARF2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 10,
+      "y": 22,
+      "elevation": 0,
+      "item": "ITEM_ENIGMA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_ENIGMA"
+    },
+    {
+      "type": "hidden_item",
+      "x": 14,
+      "y": 21,
+      "elevation": 0,
+      "item": "ITEM_ENIGMA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_ENIGMA2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 20,
+      "y": 22,
+      "elevation": 0,
+      "item": "ITEM_REVIVAL_HERB",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_REVIVAL_HERB"
+    },
+    {
+      "type": "hidden_item",
+      "x": 27,
+      "y": 110,
+      "elevation": 0,
+      "item": "ITEM_GANLON_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_GANLON"
+    },
+    {
+      "type": "hidden_item",
+      "x": 27,
+      "y": 86,
+      "elevation": 0,
+      "item": "ITEM_LIECHI_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_LIECHI"
+    },
+    {
+      "type": "hidden_item",
+      "x": 47,
+      "y": 107,
+      "elevation": 0,
+      "item": "ITEM_SALAC_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_SALAC"
+    },
+    {
+      "type": "hidden_item",
+      "x": 39,
+      "y": 73,
+      "elevation": 0,
+      "item": "ITEM_PETAYA_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_PETAYA"
+    },
+    {
+      "type": "hidden_item",
+      "x": 53,
+      "y": 45,
+      "elevation": 0,
+      "item": "ITEM_APICOT_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_APICOT"
+    },
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 12,
+      "elevation": 0,
+      "item": "ITEM_LANSAT_BERRY",
+      "flag": "FLAG_HIDDEN_ITEM_FABLED_ISLAND_LANSAT"
+    }
   ]
 }

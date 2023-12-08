@@ -411,16 +411,16 @@
     {
       "map_section": "MAPSEC_FABLED_ISLAND",
       "name": "FABLED ISLAND",
-      "x": 11,
-      "y": 7,
+      "x": 12,
+      "y": 9,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_FABLED_ISLAND_SUMMIT",
-      "name": "FABLED ISLAND SUMMIT",
+      "name": "F.ISLAND SUMMIT",
       "x": 12,
-      "y": 7,
+      "y": 9,
       "width": 1,
       "height": 1
     },

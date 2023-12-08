@@ -108,6 +108,10 @@ text FabledIsland_Interior_Horde_Grunt_After_Fight {
     format("I better heal my POKéMON to jump back in and help.")
 }
 
+text FabledIsland_Interior_Rival_Dont_Leave {
+    format("Hey! Don't leave me here!")
+}
+
 script FabledIsland_Interior_Horde_Grunt_After_Fight_Script {
     msgbox(FabledIsland_Interior_Horde_Grunt_After_Fight, MSGBOX_NPC)
 }
@@ -256,6 +260,16 @@ script FabledIsland_Interior_EventScript_Horde {
     setvar(VAR_GIFT_UNUSED_1, 1)
     setflag(FLAG_FABLED_ISLAND_HORDE_BEATEN)
     releaseall
+}
+
+script FabledIsland_Interior_EventScript_Dont_Leave {
+    msgbox(FabledIsland_Interior_Rival_Dont_Leave, MSGBOX_NPC)
+    applymovement(OBJ_EVENT_ID_PLAYER, Horde_Grunt_10_Approach)
+}
+
+
+script FabledIsland_Interior_FindItem_MaxRevive {
+	finditem(ITEM_MAX_REVIVE)
 }
 
 movement Movement_Walk_To_Center {

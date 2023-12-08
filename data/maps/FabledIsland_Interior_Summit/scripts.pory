@@ -1,12 +1,12 @@
-mapscripts FabledIsland_Interior_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: SetupRivalGfxId
+mapscripts FabledIsland_Interior_Summit_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: SetupRival_Summit_GfxId
 }
 
-script SetupRivalGfxId {
-    if(flag(FLAG_NEO_EVENT_DONE) && !flag(FLAG_FINAL_RIVAL_BATTLE)) {
-    removeobject(7)
-    call(Common_EventScript_SetupRivalGfxId)
-    addobject(7)
+script SetupRival_Summit_GfxId {
+    removeobject(4)
+    if(flag(FLAG_NEO_EVENT_DONE)) {
+        call(Common_EventScript_SetupRivalGfxId)
+        addobject(4)
     }
 }
 
@@ -58,10 +58,27 @@ text FabledIsland_Summit_Brendan_No {
     format("Brendan: Haha, I'd be scared of my strength too.")
 }
 
+text FabledIsland_Summit_Rival_Lose_Text {
+    format("Wow, that was an incredible final battle!")
+}
+
 text FabledIsland_Summit_Brendan_Defeated {
     format("Brendan: I can't believe it... you're like an insurmountable wall that no one can overcome.\pBut you know what, that's okay. You've pushed me to levels farther than I could have imagined.\pI guess that's how you got so strong too, right? I watched your battle with your friends to become the Champion in the Orre region. Your battles were incredible.\p...\pWhat do you think you'll do next? Complete your POKéDEX? Challenge the Battle Frontier? Or maybe you're planning to go abroad?\p No matter what you do, I'll be ready for your next challenge!")
 }
 
+script FabledIsland_Summit_EventScript_Fix_Left {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, FabledIsland_Summit_Fix_Left)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    goto(FabledIsland_Summit_EventScript)
+}
+
+script FabledIsland_Summit_EventScript_Fix_Right {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, FabledIsland_Summit_Fix_Right)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    goto(FabledIsland_Summit_EventScript)
+}
 
 script FabledIsland_Summit_EventScript {
     applymovement(OBJ_EVENT_ID_PLAYER, FabledIsland_Summit_Walk_Up)
@@ -91,8 +108,6 @@ script FabledIsland_Summit_EventScript {
     removeobject(2)
     removeobject(3)
     removeobject(4)
-    removeobject(5)
-    removeobject(6)
     fadescreen(FADE_FROM_BLACK)
     special(SpawnCameraObject)
     applymovement(OBJ_EVENT_ID_CAMERA, FabledIsland_Summit_Pan_Down)
@@ -109,6 +124,11 @@ script FabledIsland_Summit_Rival_Battle {
         if (var(VAR_RESULT) == 1) {
             msgbox(FabledIsland_Summit_May_Yes, MSGBOX_NPC)
             //trainer battle here
+            switch (var(VAR_STARTER_MON)) {
+	            case 0: trainerbattle_no_intro(TRAINER_MAY_LILYCOVE_TREECKO, FabledIsland_Summit_Rival_Lose_Text)
+	            case 1: trainerbattle_no_intro(TRAINER_MAY_LILYCOVE_TORCHIC, FabledIsland_Summit_Rival_Lose_Text)
+	            case 2: trainerbattle_no_intro(TRAINER_MAY_LILYCOVE_MUDKIP, FabledIsland_Summit_Rival_Lose_Text)
+            }
             msgbox(FabledIsland_Summit_May_Defeated)
             setflag(FLAG_FINAL_RIVAL_BATTLE)
         }
@@ -120,6 +140,11 @@ script FabledIsland_Summit_Rival_Battle {
         if (var(VAR_RESULT) == 1) {
             msgbox(FabledIsland_Summit_Brendan_Yes, MSGBOX_NPC)
             //trainer battle here
+            switch (var(VAR_STARTER_MON)) {
+	            case 0: trainerbattle_no_intro(TRAINER_BRENDAN_LILYCOVE_TREECKO, FabledIsland_Summit_Rival_Lose_Text)
+	            case 1: trainerbattle_no_intro(TRAINER_BRENDAN_LILYCOVE_TORCHIC, FabledIsland_Summit_Rival_Lose_Text)
+	            case 2: trainerbattle_no_intro(TRAINER_BRENDAN_LILYCOVE_MUDKIP, FabledIsland_Summit_Rival_Lose_Text)
+            }
             msgbox(FabledIsland_Summit_Brendan_Defeated)
             setflag(FLAG_FINAL_RIVAL_BATTLE)
         }
@@ -127,8 +152,8 @@ script FabledIsland_Summit_Rival_Battle {
 			msgbox(FabledIsland_Summit_Brendan_No, MSGBOX_NPC)
 		}
     }
-
-    applymovement(VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown)
+    closemessage
+    applymovement(VAR_LAST_TALKED, FabledIsland_Summit_Walk_Fast_Down)
 	waitmovement(0)
 	delay(50)
 	setfieldeffectargument(0, 1)
@@ -160,4 +185,18 @@ movement FabledIsland_Summit_Pan_Up {
 
 movement FabledIsland_Summit_Pan_Down {
     walk_slow_down * 2
+}
+
+movement FabledIsland_Summit_Walk_Fast_Down {
+    walk_in_place_faster_down
+}
+
+movement FabledIsland_Summit_Fix_Left {
+    walk_up
+    walk_right
+}
+
+movement FabledIsland_Summit_Fix_Right {
+    walk_up
+    walk_left
 }

@@ -12955,7 +12955,7 @@ static const struct TrainerMonItemCustomMoves sParty_MaxieArchie_Phase1[] = {
         .lvl = 86,
         .species = SPECIES_HOUNDOOM,
         .heldItem = ITEM_LUM_BERRY,
-        .moves = {MOVE_CRUNCH, MOVE_ERUPTION, MOVE_HYPER_FANG, MOVE_POISON_FANG} 
+        .moves = {MOVE_CRUNCH, MOVE_ERUPTION, MOVE_IRON_TAIL, MOVE_POISON_FANG} 
     },
     {
         .iv = 255,
@@ -12969,7 +12969,7 @@ static const struct TrainerMonItemCustomMoves sParty_MaxieArchie_Phase1[] = {
         .lvl = 86,
         .species = SPECIES_JIRACHI,
         .heldItem = ITEM_SITRUS_BERRY,
-        .moves = {MOVE_CRUNCH, MOVE_ERUPTION, MOVE_HYPER_FANG, MOVE_POISON_FANG}
+        .moves = {MOVE_DOOM_DESIRE, MOVE_PSYCHIC, MOVE_BODY_SLAM, MOVE_WISH}
     },
     {
         .iv = 255,
@@ -13038,3 +13038,103 @@ static const struct TrainerMonItemCustomMoves sParty_MaxieArchie_Phase2[] = {
         .moves = {MOVE_ERUPTION, MOVE_SOLAR_BEAM, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY}
     },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rival_Final_Torchic[] = {
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_SWELLOW,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_RAICHU,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_BRELOOM,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_MAGCARGO,
+    },
+    {
+        .iv = 255,
+        .lvl = 90,
+        .species = SPECIES_JIRACHI,
+    },
+    {
+        .iv = 255,
+        .lvl = 90,
+        .species = SPECIES_SWAMPERT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rival_Final_Treeko[] = {
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_SWELLOW,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_RAICHU,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_BRELOOM,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_WAILORD,
+    },
+    {
+        .iv = 255,
+        .lvl = 90,
+        .species = SPECIES_JIRACHI,
+    },
+    {
+        .iv = 255,
+        .lvl = 90,
+        .species = SPECIES_BLAZIKEN,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Rival_Final_Mudkip[] = {
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_SWELLOW,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_RAICHU,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_WAILORD,
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_MAGCARGO,
+    },
+    {
+        .iv = 255,
+        .lvl = 90,
+        .species = SPECIES_JIRACHI,
+    },
+    {
+        .iv = 255,
+        .lvl = 90,
+        .species = SPECIES_SCEPTILE,
+    },
+};
+

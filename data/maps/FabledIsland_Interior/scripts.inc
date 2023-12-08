@@ -185,6 +185,17 @@ FabledIsland_Interior_EventScript_Horde_14:
 	goto FabledIsland_Interior_EventScript_Horde_13
 
 
+FabledIsland_Interior_EventScript_Dont_Leave::
+	msgbox FabledIsland_Interior_Rival_Dont_Leave, MSGBOX_NPC
+	applymovement OBJ_EVENT_ID_PLAYER, Horde_Grunt_10_Approach
+	return
+
+
+FabledIsland_Interior_FindItem_MaxRevive::
+	finditem ITEM_MAX_REVIVE
+	return
+
+
 Movement_Walk_To_Center:
 	walk_up
 	walk_up
@@ -812,3 +823,6 @@ FabledIsland_Interior_Rival_Handle_This::
 FabledIsland_Interior_Horde_Grunt_After_Fight::
 	.string "I better heal my POKéMON to jump back\n"
 	.string "in and help.$"
+
+FabledIsland_Interior_Rival_Dont_Leave::
+	.string "Hey! Don't leave me here!$"

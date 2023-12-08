@@ -78,6 +78,11 @@ FabledIsland_EventScript_AdminTrevor::
 	end
 
 
+FabledIsland_FindItem_StarfBerry::
+	finditem ITEM_STARF_BERRY
+	return
+
+
 FabledIsland_Neo_AquaGrunt1_Intro_Text::
 	.string "I'm up first, and I'll guarantee this\n"
 	.string "operation is a success!$"
