@@ -43,7 +43,7 @@ text FabledIsland_Summit_May_No {
 }
 
 text FabledIsland_Summit_May_Defeated {
-    format("May: I can't believe it... you're like an insurmountable wall that no one can overcome.\pBut you know what, that's okay. You've helped push me to levels farther than I could have imagined.\pI guess that's how you got so strong too, right? I watched your battle with your friends to become the Champion in the Orre region. Your battles were incredible.\p...\pWhat do you think you'll do next? Complete your POKéDEX? Challenge the Battle Frontier? Or maybe you're planning to go abroad?\p No matter what you do, I'll be rooting for you!")
+    format("May: I can't believe it... you're like an insurmountable wall that no one can overcome.\pBut you know what, that's okay. You've helped push me to levels farther than I could have imagined.\pI guess that's how you got so strong too, taking on gyms, the Elite Four, even the Champion.\pYour battles were incredible.\p...\pWhat do you think you'll do next? Complete your POKéDEX? Challenge the Battle Frontier? Or maybe you're planning to go abroad?\p No matter what you do, I'll be rooting for you!")
 }
 
 text FabledIsland_Summit_Brendan_Hello {
@@ -63,7 +63,7 @@ text FabledIsland_Summit_Rival_Lose_Text {
 }
 
 text FabledIsland_Summit_Brendan_Defeated {
-    format("Brendan: I can't believe it... you're like an insurmountable wall that no one can overcome.\pBut you know what, that's okay. You've pushed me to levels farther than I could have imagined.\pI guess that's how you got so strong too, right? I watched your battle with your friends to become the Champion in the Orre region. Your battles were incredible.\p...\pWhat do you think you'll do next? Complete your POKéDEX? Challenge the Battle Frontier? Or maybe you're planning to go abroad?\p No matter what you do, I'll be ready for your next challenge!")
+    format("Brendan: I can't believe it... you're like an insurmountable wall that no one can overcome.\pBut you know what, that's okay. You've pushed me to levels farther than I could have imagined.\pI guess that's how you got so strong too, taking on gyms, the Elite Four, even the Champion.\pYour battles were incredible.\p...\pWhat do you think you'll do next? Complete your POKéDEX? Challenge the Battle Frontier? Or maybe you're planning to go abroad?\p No matter what you do, I'll be ready for your next challenge!")
 }
 
 script FabledIsland_Summit_EventScript_Fix_Left {

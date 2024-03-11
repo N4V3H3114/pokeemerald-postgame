@@ -13042,32 +13042,32 @@ static const struct TrainerMonItemCustomMoves sParty_MaxieArchie_Phase2[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Rival_Final_Torchic[] = {
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_SWELLOW,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_RAICHU,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_BRELOOM,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_MAGCARGO,
     },
     {
         .iv = 255,
-        .lvl = 70,
+        .lvl = 74,
         .species = SPECIES_JIRACHI,
     },
     {
         .iv = 255,
-        .lvl = 70,
+        .lvl = 74,
         .species = SPECIES_SWAMPERT,
     },
 };
@@ -13075,32 +13075,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rival_Final_Torchic[] = 
 static const struct TrainerMonNoItemDefaultMoves sParty_Rival_Final_Treeko[] = {
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_SWELLOW,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_RAICHU,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_BRELOOM,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_WAILORD,
     },
     {
         .iv = 255,
-        .lvl = 70,
+        .lvl = 74,
         .species = SPECIES_JIRACHI,
     },
     {
         .iv = 255,
-        .lvl = 70,
+        .lvl = 74,
         .species = SPECIES_BLAZIKEN,
     },
 };
@@ -13108,32 +13108,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rival_Final_Treeko[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Rival_Final_Mudkip[] = {
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_SWELLOW,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_RAICHU,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_WAILORD,
     },
     {
         .iv = 255,
-        .lvl = 69,
+        .lvl = 73,
         .species = SPECIES_MAGCARGO,
     },
     {
         .iv = 255,
-        .lvl = 70,
+        .lvl = 74,
         .species = SPECIES_JIRACHI,
     },
     {
         .iv = 255,
-        .lvl = 70,
+        .lvl = 74,
         .species = SPECIES_SCEPTILE,
     },
 };
