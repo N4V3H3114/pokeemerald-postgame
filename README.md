@@ -29,7 +29,6 @@ in ORAS.
 Fun Pokemon on the island to find (fun is probably subjective)
 Hidden items on the island to help your journey. Specifically, the 5 
 berries that raise your stats in a pinch are hidden on the island
-Struggles!
 
 Be prepared as Fabled Island has an unusual difficulty challenge I've
 always wanted to see in a Pokemon game but hasn't been replicated I think.
