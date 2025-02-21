@@ -3,11 +3,11 @@ Route122_MapScripts::
 	.byte 0
 
 Route122_OnLoad:
-	call_if_set FLAG_NEO_AQUA_LILYCOVE_MET, Script_Open_Route_135
+	call_if_set FLAG_NEO_AQUA_LILYCOVE_MET, Script_Open_New_Base
 	end
 
 
-Script_Open_Route_135::
+Script_Open_New_Base::
 	setmetatile 37, 17, METATILE_General_CalmWater, FALSE
 	setmetatile 37, 18, METATILE_General_CalmWater, FALSE
 	setmetatile 38, 17, METATILE_General_CalmWater, FALSE
